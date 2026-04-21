@@ -4,7 +4,7 @@ type Dish = {
   title: string
   caption: string
   image: { sm: string; md: string }
-  size: 'tall' | 'wide' | 'square'
+  span?: string
 }
 
 const dishes: Dish[] = [
@@ -12,39 +12,67 @@ const dishes: Dish[] = [
     title: 'Teller',
     caption: 'Klassisch serviert. Hummus, Tahini, Gurkensalat.',
     image: { sm: '/images/food-teller-new-sm.webp', md: '/images/food-teller-new-md.webp' },
-    size: 'tall',
   },
   {
     title: 'Wraps & Brote',
     caption: 'Fladenbrot, Salate, Sauce. Der Dauerbrenner im Imbiss.',
     image: { sm: '/images/food-sandwich-new-sm.webp', md: '/images/food-sandwich-new-md.webp' },
-    size: 'square',
   },
   {
     title: 'Bowls',
     caption: 'Gesund, sättigend, bunt. Lunch-Favorit für Bürogäste.',
     image: { sm: '/images/food-bowl-new-sm.webp', md: '/images/food-bowl-new-md.webp' },
-    size: 'square',
   },
   {
     title: 'Finger-Food & Catering',
     caption: 'XS-Größe. Für Catering-Platten, Apéro, Buffets.',
     image: { sm: '/images/falafel-group-new-sm.webp', md: '/images/falafel-group-new-md.webp' },
-    size: 'wide',
+    span: 'md:col-span-2',
   },
   {
     title: 'Burger',
     caption: 'Veganer Patty-Ersatz. M-Größe, saftig, knusprig.',
     image: { sm: '/images/falafel-xl-new-sm.webp', md: '/images/falafel-xl-new-md.webp' },
-    size: 'square',
   },
   {
     title: 'Signature',
     caption: 'XL. Fine-Dining-Präsentation auf höchstem Niveau.',
     image: { sm: '/images/falafel-inside-new-sm.webp', md: '/images/falafel-inside-new-md.webp' },
-    size: 'tall',
+    span: 'md:col-span-2',
   },
 ]
+
+function Card({ d, i }: { d: Dish; i: number }) {
+  return (
+    <motion.figure
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.6, delay: i * 0.06, ease: 'easeOut' }}
+      className={`group relative overflow-hidden rounded-sm bg-brand-ink h-[260px] md:h-[360px] ${d.span ?? ''}`}
+    >
+      <picture>
+        <source media="(min-width: 768px)" srcSet={d.image.md} />
+        <img
+          src={d.image.sm}
+          alt={d.title}
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-brand-ink/20 to-transparent" />
+      <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-6 text-brand-cream-soft">
+        <div className="font-serif text-[18px] md:text-[22px] font-semibold leading-tight mb-1">
+          {d.title}
+        </div>
+        <div className="text-[12px] md:text-[13px] text-brand-cream-soft/80 leading-relaxed max-w-[36ch]">
+          {d.caption}
+        </div>
+      </figcaption>
+    </motion.figure>
+  )
+}
 
 export default function Anwendungen() {
   return (
@@ -68,69 +96,11 @@ export default function Anwendungen() {
           </p>
         </motion.div>
 
-        {/* Mobile: vertical stack */}
-        <div className="md:hidden grid grid-cols-1 gap-3 auto-rows-[260px]">
+        {/* Grid — mobile: 1-col, tablet: 2-col, desktop: 3-col bento */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           {dishes.map((d, i) => (
-            <motion.figure
-              key={d.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: i * 0.06, ease: 'easeOut' }}
-              className="group relative overflow-hidden rounded-sm bg-brand-ink"
-            >
-              <picture>
-                <source media="(min-width: 768px)" srcSet={d.image.md} />
-                <img src={d.image.sm} alt={d.title} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[800ms] ease-out" loading="lazy" decoding="async" />
-              </picture>
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-brand-ink/20 to-transparent" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-4 text-brand-cream-soft">
-                <div className="font-serif text-[18px] font-semibold leading-tight mb-1">{d.title}</div>
-                <div className="text-[12px] text-brand-cream-soft/80 leading-relaxed">{d.caption}</div>
-              </figcaption>
-            </motion.figure>
+            <Card key={d.title} d={d} i={i} />
           ))}
-        </div>
-
-        {/* Desktop: horizontal film strip */}
-        <div className="hidden md:block -mx-[clamp(20px,5vw,64px)]">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex overflow-x-auto gap-4 no-scrollbar px-[clamp(20px,5vw,64px)] pb-2"
-          >
-            {dishes.map((d, i) => {
-              const h = d.size === 'tall' ? 'h-[520px]' : d.size === 'wide' ? 'h-[360px]' : 'h-[440px]'
-              const w = d.size === 'wide' ? 'w-[560px] lg:w-[640px]' : 'w-[340px] lg:w-[380px]'
-              return (
-                <motion.figure
-                  key={d.title}
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: '-100px' }}
-                  transition={{ duration: 0.7, delay: i * 0.08, ease: 'easeOut' }}
-                  className={`group relative overflow-hidden rounded-sm bg-brand-ink flex-shrink-0 ${w} ${h}`}
-                >
-                  <picture>
-                    <source media="(min-width: 768px)" srcSet={d.image.md} />
-                    <img src={d.image.sm} alt={d.title} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-[800ms] ease-out" loading="lazy" decoding="async" />
-                  </picture>
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/90 via-brand-ink/15 to-transparent" />
-                  <figcaption className="absolute inset-x-0 bottom-0 p-6 text-brand-cream-soft">
-                    <div className="font-serif text-[22px] font-semibold leading-tight mb-1">{d.title}</div>
-                    <div className="text-[13px] text-brand-cream-soft/80 leading-relaxed max-w-[28ch]">{d.caption}</div>
-                  </figcaption>
-                </motion.figure>
-              )
-            })}
-            {/* Trailing spacer so last card isn't glued to edge */}
-            <div className="flex-shrink-0 w-[clamp(20px,5vw,64px)]" />
-          </motion.div>
-          <p className="mt-4 text-right pr-[clamp(20px,5vw,64px)] text-[11px] text-brand-charcoal/40 uppercase tracking-[0.2em]">
-            → scrollen
-          </p>
         </div>
 
         <motion.p
