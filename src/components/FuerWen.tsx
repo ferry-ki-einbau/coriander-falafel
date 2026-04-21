@@ -8,7 +8,7 @@ const kunden = [
   { icon: Truck, label: 'Großhändler', sub: 'Regelmäßige Lieferung, feste Konditionen.' },
   { icon: Users, label: 'Caterer', sub: 'Für Events, Hochzeiten und Großveranstaltungen.' },
   { icon: Building2, label: 'Hotels & Kantinen', sub: 'Buffet-tauglich, vegetarisch-freundlich.' },
-  { icon: Coffee, label: 'Betriebsgastronomie', sub: 'Mitarbeiter-Verpflegung auf Top-Niveau.' },
+  { icon: Coffee, label: 'Betriebs\u00ADgastronomie', sub: 'Mitarbeiter-Verpflegung auf Top-Niveau.' },
   { icon: Sparkles, label: 'Feinschmecker', sub: 'Auch für deine Küche zuhause verfügbar.' },
 ]
 
@@ -45,7 +45,7 @@ export default function FuerWen() {
                 strokeWidth={1.5}
                 className="text-brand-sand mb-3 md:mb-5 group-hover:text-brand-rust transition-colors"
               />
-              <div className="font-serif text-[16px] md:text-[20px] font-semibold text-brand-cream-soft mb-1">
+              <div className="font-serif text-[14px] md:text-[20px] font-semibold text-brand-cream-soft mb-1">
                 {k.label}
               </div>
               <div className="text-[12px] md:text-[13.5px] leading-relaxed text-brand-cream-soft/60 hidden sm:block">
