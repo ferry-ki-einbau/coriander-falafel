@@ -16,15 +16,15 @@ const dishes: Dish[] = [
     gridArea: 'sig',
   },
   {
-    title: 'Teller',
-    caption: 'Klassisch serviert. Hummus, Tahini, Gurkensalat.',
-    image: { sm: '/images/food-teller-new-sm.webp', md: '/images/food-teller-new-md.webp' },
+    title: 'Falafel pur',
+    caption: 'Golden, knusprig, sesam-gestreut. Der erste Eindruck zählt.',
+    image: { sm: '/images/falafel-arranged-new-sm.webp', md: '/images/falafel-arranged-new-md.webp' },
     gridArea: 'teller',
   },
   {
-    title: 'Wraps & Brote',
-    caption: 'Fladenbrot, Salate, Sauce. Der Dauerbrenner im Imbiss.',
-    image: { sm: '/images/food-sandwich-new-sm.webp', md: '/images/food-sandwich-new-md.webp' },
+    title: 'Dönerbrot',
+    caption: 'Der Klassiker. Im Brot mit Kraut, Tomate, Tahini.',
+    image: { sm: '/images/food-doenerbrot-new-sm.webp', md: '/images/food-doenerbrot-new-md.webp' },
     gridArea: 'wraps',
   },
   {
@@ -40,9 +40,9 @@ const dishes: Dish[] = [
     gridArea: 'ffood',
   },
   {
-    title: 'Burger',
-    caption: 'Veganer Patty-Ersatz. M-Größe, saftig, knusprig.',
-    image: { sm: '/images/falafel-xl-new-sm.webp', md: '/images/falafel-xl-new-md.webp' },
+    title: 'Pidebrot',
+    caption: 'Auf türkischem Fladenbrot. Vegan, sättigend, beliebt.',
+    image: { sm: '/images/food-pidebrot-new-sm.webp', md: '/images/food-pidebrot-new-md.webp' },
     gridArea: 'burger',
   },
 ]
