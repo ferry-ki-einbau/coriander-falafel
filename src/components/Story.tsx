@@ -13,7 +13,7 @@ export default function Story() {
             transition={{ duration: 0.9, ease: 'easeOut' }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-[2px] overflow-hidden bg-brand-forest">
+            <div className="relative aspect-[3/2] lg:aspect-[4/5] rounded-[2px] overflow-hidden bg-brand-forest">
               <picture>
                 <source media="(min-width: 768px)" srcSet="/images/gruender-hands-lg.webp" />
                 <img

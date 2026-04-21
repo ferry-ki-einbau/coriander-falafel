@@ -3,8 +3,8 @@ import { ArrowRight, Phone } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] overflow-hidden bg-brand-forest-deep">
-      {/* Background: Kling Hero Video (Makro fallende Falafel → aufgebrochen, grünes Kräuter-Inneres) */}
+    <section className="relative min-h-[100dvh] overflow-hidden bg-brand-ink">
+      {/* Background: Kling Hero Video */}
       <div className="absolute inset-0">
         <video
           src="/video/hero-desktop.mp4"
@@ -15,11 +15,12 @@ export default function Hero() {
           playsInline
           preload="metadata"
           aria-hidden="true"
-          className="h-full w-full object-cover opacity-70"
+          className="h-full w-full object-cover opacity-85"
         />
-        {/* Warm gradient for legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-forest-deep/60 via-brand-forest-deep/40 to-brand-ink/85" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(245,230,184,0.08)_0%,_transparent_60%)]" />
+        {/* Warm dark gradient — no green, just depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-brand-ink/80" />
+        {/* Warm amber radial glow at center */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(245,180,80,0.08)_0%,_transparent_65%)]" />
       </div>
 
       {/* Content */}

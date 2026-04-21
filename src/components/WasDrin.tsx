@@ -28,7 +28,7 @@ export default function WasDrin() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-16 md:mb-20"
+          className="max-w-3xl mb-8 md:mb-20"
         >
           <div className="eyebrow text-brand-rust mb-5">Was drin ist. Und was nicht.</div>
           <h2 className="display-lg text-brand-cream-soft">
@@ -44,7 +44,7 @@ export default function WasDrin() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="relative bg-brand-forest p-8 md:p-12"
+            className="relative bg-brand-forest p-6 md:p-12"
           >
             <div className="flex items-center gap-3 mb-8 pb-6 border-b border-brand-cream-soft/15">
               <div className="w-11 h-11 rounded-full bg-brand-cream-soft/10 flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function WasDrin() {
                 <div className="font-serif text-[26px] md:text-[28px] font-bold text-brand-cream-soft leading-none mt-1">Zutaten</div>
               </div>
             </div>
-            <ul className="space-y-5">
+            <ul className="space-y-3 md:space-y-5">
               {drin.map(item => (
                 <li key={item.label} className="flex gap-4">
                   <Check
@@ -82,7 +82,7 @@ export default function WasDrin() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative bg-brand-rust p-8 md:p-12"
+            className="relative bg-brand-rust p-6 md:p-12"
           >
             <div className="flex items-center gap-3 mb-8 pb-6 border-b border-brand-cream-soft/20">
               <div className="w-11 h-11 rounded-full bg-brand-cream-soft/10 flex items-center justify-center">
@@ -93,7 +93,7 @@ export default function WasDrin() {
                 <div className="font-serif text-[26px] md:text-[28px] font-bold text-brand-cream-soft leading-none mt-1">Verzicht</div>
               </div>
             </div>
-            <ul className="space-y-5">
+            <ul className="space-y-3 md:space-y-5">
               {nicht.map(item => (
                 <li key={item.label} className="flex gap-4">
                   <X
@@ -121,7 +121,7 @@ export default function WasDrin() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.3 }}
-          className="mt-14 md:mt-20 text-center max-w-3xl mx-auto"
+          className="mt-8 md:mt-20 text-center max-w-3xl mx-auto"
         >
           <p className="font-serif text-[24px] md:text-[32px] leading-[1.35] text-brand-cream-soft italic">
             Wir produzieren, was wir selbst essen würden —{' '}

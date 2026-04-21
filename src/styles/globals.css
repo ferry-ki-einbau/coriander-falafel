@@ -67,8 +67,8 @@
 
 @layer components {
   .section-pad {
-    padding-top: clamp(56px, 9vw, 128px);
-    padding-bottom: clamp(56px, 9vw, 128px);
+    padding-top: clamp(40px, 9vw, 128px);
+    padding-bottom: clamp(40px, 9vw, 128px);
   }
 
   .container-prose {

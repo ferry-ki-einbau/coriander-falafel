@@ -40,7 +40,7 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-14 md:mb-20"
+          className="max-w-3xl mb-8 md:mb-20"
         >
           <div className="eyebrow mb-5">Häufige Fragen</div>
           <h2 className="display-lg text-brand-ink">

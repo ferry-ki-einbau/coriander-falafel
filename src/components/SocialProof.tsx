@@ -46,7 +46,7 @@ export default function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-14 md:mb-20"
+          className="max-w-3xl mb-8 md:mb-20"
         >
           <div className="eyebrow text-brand-sand mb-5">Diese Küchen vertrauen uns</div>
           <h2 className="display-lg text-brand-cream-soft">
@@ -66,7 +66,7 @@ export default function SocialProof() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mt-16 md:mt-24 pt-12 border-t border-brand-cream-soft/10 text-center"
+          className="mt-8 md:mt-24 pt-8 md:pt-12 border-t border-brand-cream-soft/10 text-center"
         >
           <p className="font-script text-2xl md:text-3xl text-brand-sand mb-3">
             &ldquo;Wir produzieren jeden Tag so,

@@ -34,7 +34,7 @@ export default function Prozess() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-12 md:mb-16"
+          className="max-w-3xl mb-8 md:mb-16"
         >
           <div className="eyebrow mb-5">So arbeiten wir zusammen</div>
           <h2 className="display-lg text-brand-ink mb-6">
@@ -59,7 +59,7 @@ export default function Prozess() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.7, delay: i * 0.15, ease: 'easeOut' }}
-                className="relative bg-brand-cream border border-brand-ink/5 p-7 md:p-8 rounded-sm hover:border-brand-forest/20 transition-colors"
+                className="relative bg-brand-cream border border-brand-ink/5 p-5 md:p-8 rounded-sm hover:border-brand-forest/20 transition-colors"
               >
                 {/* Number */}
                 <div className="absolute -top-4 left-7 md:left-8 bg-brand-forest text-brand-cream-soft font-serif text-[13px] font-bold tracking-[0.15em] px-3 py-1 rounded-sm">
@@ -91,7 +91,7 @@ export default function Prozess() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-14 md:mt-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-brand-forest-deep text-brand-cream-soft p-8 md:p-10 rounded-sm"
+          className="mt-8 md:mt-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-brand-forest-deep text-brand-cream-soft p-6 md:p-10 rounded-sm"
         >
           <div className="max-w-2xl">
             <div className="font-script text-[22px] md:text-[26px] text-brand-sand mb-2">

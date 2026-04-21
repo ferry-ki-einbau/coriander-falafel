@@ -49,7 +49,7 @@ function Card({ d, i }: { d: Dish; i: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, delay: i * 0.06, ease: 'easeOut' }}
-      className={`group relative overflow-hidden rounded-sm bg-brand-ink h-[260px] md:h-[360px] ${d.span ?? ''}`}
+      className={`group relative overflow-hidden rounded-sm bg-brand-ink h-[175px] sm:h-[260px] md:h-[360px] ${d.span ?? ''}`}
     >
       <picture>
         <source media="(min-width: 768px)" srcSet={d.image.md} />
@@ -83,7 +83,7 @@ export default function Anwendungen() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-14 md:mb-20"
+          className="max-w-3xl mb-8 md:mb-20"
         >
           <div className="eyebrow mb-5">Was ihr damit macht</div>
           <h2 className="display-lg text-brand-ink mb-6">
@@ -97,7 +97,7 @@ export default function Anwendungen() {
         </motion.div>
 
         {/* Grid — mobile: 1-col, tablet: 2-col, desktop: 3-col bento */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
           {dishes.map((d, i) => (
             <Card key={d.title} d={d} i={i} />
           ))}
@@ -108,7 +108,7 @@ export default function Anwendungen() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-script text-3xl md:text-4xl text-brand-forest text-center mt-14 md:mt-20"
+          className="font-script text-3xl md:text-4xl text-brand-forest text-center mt-8 md:mt-20"
         >
           Werdet kreativ mit uns.
         </motion.p>

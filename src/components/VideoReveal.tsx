@@ -11,7 +11,7 @@ const zutaten = [
 export default function VideoReveal() {
   return (
     <section className="relative bg-brand-forest-deep overflow-hidden">
-      <div className="grid lg:grid-cols-2 min-h-[600px] lg:min-h-[680px]">
+      <div className="grid lg:grid-cols-2 min-h-[420px] lg:min-h-[680px]">
 
         {/* Left — Text */}
         <motion.div
@@ -19,7 +19,7 @@ export default function VideoReveal() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col justify-center px-8 py-16 md:px-14 lg:px-16 xl:px-20 lg:py-20"
+          className="flex flex-col justify-center px-8 py-10 md:px-14 lg:px-16 xl:px-20 lg:py-20"
         >
           <div className="eyebrow text-brand-sand/70 mb-5">Produziert in Berlin</div>
 
@@ -68,7 +68,7 @@ export default function VideoReveal() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="relative min-h-[360px] lg:min-h-0 overflow-hidden"
+          className="relative min-h-[240px] lg:min-h-0 overflow-hidden"
         >
           <picture>
             <source media="(min-width: 1024px)" srcSet="/images/zutaten-flatlay-lg.webp" />

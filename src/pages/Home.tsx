@@ -3,16 +3,15 @@ import Hero from '../components/Hero'
 import TrustBadges from '../components/TrustBadges'
 import Story from '../components/Story'
 import WasDrin from '../components/WasDrin'
-import StatementQuote from '../components/StatementQuote'
+import VideoReveal from '../components/VideoReveal'
 import Produkte from '../components/Produkte'
 import Probemuster from '../components/Probemuster'
-import VideoReveal from '../components/VideoReveal'
 import Prozess from '../components/Prozess'
 import FuerWen from '../components/FuerWen'
 import Anwendungen from '../components/Anwendungen'
 import SocialProof from '../components/SocialProof'
-import Kontakt from '../components/Kontakt'
 import FAQ from '../components/FAQ'
+import Kontakt from '../components/Kontakt'
 import Footer from '../components/Footer'
 import StickyCTA from '../components/StickyCTA'
 
@@ -25,10 +24,9 @@ export default function Home() {
         <TrustBadges />
         <Story />
         <WasDrin />
-        <StatementQuote />
+        <VideoReveal />
         <Produkte />
         <Probemuster />
-        <VideoReveal />
         <Prozess />
         <FuerWen />
         <Anwendungen />
