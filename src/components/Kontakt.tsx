@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, MessageCircle, Send, Check, AlertCircle, Gift, Clock, Shield, Handshake } from 'lucide-react'
+import { Phone, Mail, MapPin, Send, Check, AlertCircle } from 'lucide-react'
 
 function WhatsAppIcon() {
   return (
@@ -20,7 +20,6 @@ export default function Kontakt() {
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     if (status === 'loading') return
-
     const form = e.currentTarget
     const fd = new FormData(form)
     const payload = {
@@ -33,10 +32,8 @@ export default function Kontakt() {
       nachricht: String(fd.get('nachricht') || ''),
       website: String(fd.get('website') || ''),
     }
-
     setStatus('loading')
     setErrorMsg('')
-
     try {
       const res = await fetch('/api/anfrage', {
         method: 'POST',
@@ -57,255 +54,176 @@ export default function Kontakt() {
 
   return (
     <section id="kontakt" className="section-pad relative bg-brand-ink text-brand-cream-soft overflow-hidden">
-      <div className="container-prose">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-10 md:mb-14"
-        >
-          <div className="eyebrow text-brand-rust mb-5">Kontakt</div>
-          <h2 className="display-lg text-brand-cream-soft mb-6">
-            Lass uns reden.<br />
-            <span className="italic text-brand-sand">Schnell. Direkt. Ehrlich.</span>
-          </h2>
-          <p className="text-[18px] text-brand-cream-soft/80 max-w-[52ch] leading-relaxed">
-            Ruf uns an, schreib uns per WhatsApp oder nutze das Formular. Wir melden uns in der Regel innerhalb eines Werktags.
-          </p>
+      {/* Subtle background accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(31,74,44,0.18)_0%,_transparent_60%)] pointer-events-none" />
 
-          {/* Trust-Reassurance Row */}
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl">
-            {[
-              { icon: Gift, label: 'Probebeutel gratis', sub: 'Ohne Mindestabnahme' },
-              { icon: Clock, label: 'Antwort in 24 h', sub: 'An Werktagen' },
-              { icon: Shield, label: 'DSGVO-konform', sub: 'Nur für Anfrage' },
-              { icon: Handshake, label: 'Unverbindlich', sub: 'Kein Vertrag nötig' },
-            ].map((t) => {
-              const Icon = t.icon
-              return (
-                <div
-                  key={t.label}
-                  className="flex items-start gap-2.5 bg-brand-cream-soft/[0.04] border border-brand-cream-soft/10 rounded-sm px-3 py-2.5 md:px-4 md:py-3"
-                >
-                  <Icon size={18} strokeWidth={1.6} className="flex-shrink-0 text-brand-sand mt-0.5" />
-                  <div>
-                    <div className="text-[13.5px] font-semibold text-brand-cream-soft leading-tight">
-                      {t.label}
-                    </div>
-                    <div className="text-[11.5px] text-brand-cream-soft/60 mt-0.5 leading-tight">
-                      {t.sub}
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </motion.div>
+      <div className="container-prose relative">
+        <div className="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-20 items-start">
 
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
-          {/* WhatsApp Shortcut */}
-          <motion.a
-            href="https://wa.me/4917871199918?text=Hallo%2C%20ich%20habe%20Interesse%20an%20euren%20Falafel%20f%C3%BCr%20mein%20Restaurant."
-            target="_blank"
-            rel="noopener"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-10 flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/25 hover:bg-[#25D366]/15 rounded-sm px-6 py-5 transition-colors group"
-          >
-            <div className="flex-shrink-0 w-11 h-11 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-[0_4px_16px_rgba(37,211,102,0.4)]">
-              <WhatsAppIcon />
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="font-semibold text-brand-cream-soft text-[15px] leading-tight">Direkt per WhatsApp schreiben</div>
-              <div className="text-[13px] text-brand-cream-soft/60 mt-0.5">Mustafa antwortet meist innerhalb einer Stunde</div>
-            </div>
-            <MessageCircle size={18} className="flex-shrink-0 text-[#25D366] group-hover:scale-110 transition-transform" />
-          </motion.a>
-
-          {/* Linke Spalte: Ansprechpartner */}
+          {/* Left — Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
           >
-            {/* Abas */}
-            <div className="bg-brand-cream-soft/5 border border-brand-cream-soft/10 rounded-sm p-6 md:p-8">
-              <div className="eyebrow text-brand-sand/80 mb-3">Ansprechpartner 1</div>
-              <div className="font-serif text-[24px] font-bold text-brand-cream-soft mb-1">Abas Kasim Mahmood</div>
-              <div className="text-[13px] text-brand-cream-soft/60 mb-5">Gründer · Großhandel-Betreuung</div>
-              <div className="space-y-3">
-                <a
-                  href="tel:+4917624831232"
-                  className="flex items-center gap-3 text-brand-cream-soft hover:text-brand-sand transition-colors"
-                >
-                  <Phone size={17} strokeWidth={1.8} className="flex-shrink-0" />
-                  <span className="font-medium">0176 24 83 12 32</span>
-                </a>
-                <a
-                  href="https://wa.me/4917624831232"
-                  target="_blank"
-                  rel="noopener"
-                  className="flex items-center gap-3 text-brand-cream-soft hover:text-brand-sand transition-colors"
-                >
-                  <MessageCircle size={17} strokeWidth={1.8} className="flex-shrink-0" />
-                  <span className="font-medium">WhatsApp</span>
-                </a>
-              </div>
-            </div>
+            <div className="eyebrow text-brand-rust mb-4">Kontakt</div>
+            <h2 className="display-lg text-brand-cream-soft mb-4">
+              Lass uns reden.<br />
+              <span className="italic text-brand-sand">Direkt. Ehrlich.</span>
+            </h2>
+            <p className="text-[16px] text-brand-cream-soft/65 leading-relaxed mb-8 max-w-[40ch]">
+              Probebeutel gratis · Antwort in 24 h · Unverbindlich
+            </p>
 
-            {/* Mustafa */}
-            <div className="bg-brand-cream-soft/5 border border-brand-cream-soft/10 rounded-sm p-6 md:p-8">
-              <div className="eyebrow text-brand-sand/80 mb-3">Ansprechpartner 2</div>
-              <div className="font-serif text-[24px] font-bold text-brand-cream-soft mb-1">Mustafa Kassim</div>
-              <div className="text-[13px] text-brand-cream-soft/60 mb-5">Gründer · Produktion &amp; Rezeptur</div>
-              <div className="space-y-3">
-                <a
-                  href="tel:+4917871199918"
-                  className="flex items-center gap-3 text-brand-cream-soft hover:text-brand-sand transition-colors"
-                >
-                  <Phone size={17} strokeWidth={1.8} className="flex-shrink-0" />
-                  <span className="font-medium">0178 711 99 18</span>
-                </a>
-                <a
-                  href="https://wa.me/4917871199918"
-                  target="_blank"
-                  rel="noopener"
-                  className="flex items-center gap-3 text-brand-cream-soft hover:text-brand-sand transition-colors"
-                >
-                  <MessageCircle size={17} strokeWidth={1.8} className="flex-shrink-0" />
-                  <span className="font-medium">WhatsApp · Telegram</span>
-                </a>
+            {/* WhatsApp CTA */}
+            <a
+              href="https://wa.me/4917871199918?text=Hallo%2C%20ich%20habe%20Interesse%20an%20euren%20Falafel%20f%C3%BCr%20mein%20Restaurant."
+              target="_blank"
+              rel="noopener"
+              className="group flex items-center gap-4 bg-[#25D366] hover:bg-[#1fba58] text-white rounded-sm px-5 py-4 mb-8 transition-colors shadow-[0_8px_32px_-8px_rgba(37,211,102,0.5)]"
+            >
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
+                <WhatsAppIcon />
               </div>
+              <div className="flex-1">
+                <div className="font-semibold text-[15px] leading-tight">Direkt per WhatsApp</div>
+                <div className="text-[12px] text-white/75 mt-0.5">Mustafa antwortet meist in &lt; 1 Stunde</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="group-hover:translate-x-0.5 transition-transform">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+
+            {/* Gründer */}
+            <div className="grid grid-cols-2 gap-3 mb-8">
+              {[
+                { name: 'Abas Kasim Mahmood', role: 'Großhandel', tel: '+4917624831232', display: '0176 24 83 12 32' },
+                { name: 'Mustafa Kassim', role: 'Produktion', tel: '+4917871199918', display: '0178 711 99 18' },
+              ].map((p) => (
+                <div key={p.name} className="bg-brand-cream-soft/[0.05] border border-brand-cream-soft/10 rounded-sm p-4">
+                  <div className="font-serif text-[15px] font-semibold text-brand-cream-soft leading-tight mb-0.5">{p.name.split(' ')[0]}</div>
+                  <div className="text-[11px] text-brand-cream-soft/50 uppercase tracking-[0.12em] mb-3">{p.role}</div>
+                  <a href={`tel:${p.tel}`} className="flex items-center gap-2 text-[13px] text-brand-cream-soft/80 hover:text-brand-sand transition-colors mb-1.5">
+                    <Phone size={13} strokeWidth={1.8} />
+                    {p.display}
+                  </a>
+                  <a href={`https://wa.me/${p.tel.replace('+', '')}`} target="_blank" rel="noopener" className="flex items-center gap-2 text-[13px] text-[#25D366] hover:text-[#1fba58] transition-colors">
+                    <WhatsAppIcon />
+                    WhatsApp
+                  </a>
+                </div>
+              ))}
             </div>
 
             {/* Email + Adresse */}
-            <div className="pt-2 space-y-4 text-[14.5px]">
-              <a
-                href="mailto:coriander-falafel@hotmail.com"
-                className="flex items-center gap-3 text-brand-cream-soft/90 hover:text-brand-sand transition-colors"
-              >
-                <Mail size={17} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand" />
-                <span>coriander-falafel@hotmail.com</span>
+            <div className="space-y-3 text-[14px] text-brand-cream-soft/60">
+              <a href="mailto:coriander-falafel@hotmail.com" className="flex items-center gap-3 hover:text-brand-sand transition-colors">
+                <Mail size={15} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand" />
+                coriander-falafel@hotmail.com
               </a>
-              <div className="flex items-start gap-3 text-brand-cream-soft/80">
-                <MapPin size={17} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand mt-0.5" />
-                <span>
-                  Turiner Str. 24<br />
-                  13347 Berlin
-                </span>
+              <div className="flex items-center gap-3">
+                <MapPin size={15} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand" />
+                Turiner Str. 24 · 13347 Berlin
               </div>
             </div>
           </motion.div>
 
-          {/* Rechte Spalte: Formular */}
+          {/* Right — Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="bg-brand-cream-soft text-brand-ink rounded-sm p-6 md:p-10"
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="bg-brand-cream-soft text-brand-ink rounded-sm p-6 md:p-9"
           >
-            <div className="eyebrow text-brand-rust mb-3">Unverbindliche Anfrage</div>
-            <h3 className="font-serif text-[22px] md:text-[26px] font-bold text-brand-ink mb-5 md:mb-7">
+            <div className="eyebrow text-brand-rust mb-2">Unverbindliche Anfrage</div>
+            <h3 className="font-serif text-[22px] md:text-[24px] font-bold text-brand-ink mb-6">
               Angebot anfordern
             </h3>
 
             {status === 'success' ? (
-              <div className="py-10 text-center">
+              <div className="py-12 text-center">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brand-forest text-brand-cream-soft mb-5">
                   <Check size={22} strokeWidth={2.5} />
                 </div>
-                <h4 className="font-serif text-[24px] font-bold text-brand-ink mb-3">
-                  Danke — wir melden uns.
-                </h4>
-                <p className="text-[15px] text-brand-charcoal/80 max-w-[40ch] mx-auto leading-relaxed">
-                  Deine Anfrage ist bei Abas und Mustafa gelandet. In der Regel hörst du innerhalb eines Werktags von uns.
+                <h4 className="font-serif text-[22px] font-bold text-brand-ink mb-3">Danke — wir melden uns.</h4>
+                <p className="text-[14px] text-brand-charcoal/70 max-w-[36ch] mx-auto leading-relaxed">
+                  Deine Anfrage ist bei Abas und Mustafa gelandet. In der Regel innerhalb eines Werktags.
                 </p>
               </div>
             ) : (
               <form onSubmit={onSubmit} className="space-y-4">
                 {/* Honeypot */}
                 <div className="absolute opacity-0 pointer-events-none h-0 overflow-hidden" aria-hidden="true">
-                  <label>
-                    Website
-                    <input type="text" name="website" tabIndex={-1} autoComplete="off" />
-                  </label>
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-2 gap-4">
                   <Field label="Name *" name="name" required />
                   <Field label="Firma *" name="firma" required />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-2 gap-4">
                   <Field label="Email *" name="email" type="email" required />
                   <Field label="Telefon" name="telefon" type="tel" />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[12px] uppercase tracking-[0.15em] text-brand-charcoal/70 font-semibold mb-2">
+                    <label className="block text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/60 font-semibold mb-1.5">
                       Interesse
                     </label>
                     <select
                       name="interesse"
-                      className="w-full bg-white border border-brand-ink/15 rounded-sm px-4 py-3 text-[15px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors"
                       defaultValue=""
+                      className="w-full bg-white border border-brand-ink/15 rounded-sm px-3 py-2.5 text-[14px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors"
                     >
                       <option value="" disabled>Bitte wählen</option>
                       <option value="XS">XS — Finger-Food</option>
-                      <option value="S">S — Standard (5 cm)</option>
+                      <option value="S">S — Standard</option>
                       <option value="M">M — Mid-Size</option>
                       <option value="XL">XL — Premium</option>
-                      <option value="Individuell">Individuelle Größe / Rezeptur</option>
+                      <option value="Individuell">Individuell</option>
                       <option value="Probebeutel">Probebeutel</option>
                     </select>
                   </div>
-                  <Field label="Menge (Beutel/Monat)" name="menge" placeholder="z. B. 50 Beutel" />
+                  <Field label="Menge/Monat" name="menge" placeholder="z. B. 50 Beutel" />
                 </div>
 
                 <div>
-                  <label className="block text-[12px] uppercase tracking-[0.15em] text-brand-charcoal/70 font-semibold mb-2">
+                  <label className="block text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/60 font-semibold mb-1.5">
                     Nachricht
                   </label>
                   <textarea
                     name="nachricht"
                     rows={3}
-                    placeholder="Erzähl uns von deinem Konzept, deiner Größenpräferenz oder deinen Fragen."
-                    className="w-full bg-white border border-brand-ink/15 rounded-sm px-4 py-3 text-[15px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors resize-none"
+                    placeholder="Konzept, Größenpräferenz, Fragen…"
+                    className="w-full bg-white border border-brand-ink/15 rounded-sm px-3 py-2.5 text-[14px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors resize-none"
                   />
                 </div>
 
                 {status === 'error' && (
-                  <div className="flex items-start gap-2 text-[13.5px] text-brand-rust-dark bg-brand-rust/10 border border-brand-rust/25 rounded-sm p-3">
-                    <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2 text-[13px] text-brand-rust bg-brand-rust/8 border border-brand-rust/20 rounded-sm p-3">
+                    <AlertCircle size={15} className="flex-shrink-0 mt-0.5" />
                     <span>{errorMsg || 'Etwas ist schiefgelaufen. Bitte ruf uns direkt an.'}</span>
                   </div>
                 )}
 
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="inline-flex items-center gap-2 bg-brand-forest text-brand-cream-soft px-8 py-4 rounded-full font-semibold hover:bg-brand-forest-deep transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {status === 'loading' ? 'Wird gesendet…' : (
-                    <>
-                      Anfrage absenden
-                      <Send size={16} />
-                    </>
-                  )}
-                </button>
-
-                <p className="text-[11.5px] text-brand-charcoal/55 leading-relaxed">
-                  Mit dem Absenden akzeptierst du unsere{' '}
-                  <a href="/datenschutz" className="underline hover:text-brand-forest">Datenschutzerklärung</a>.
-                  Deine Daten werden ausschließlich zur Bearbeitung deiner Anfrage verwendet.
-                </p>
+                <div className="flex items-center gap-4 pt-1">
+                  <button
+                    type="submit"
+                    disabled={status === 'loading'}
+                    className="inline-flex items-center gap-2 bg-brand-forest text-brand-cream-soft px-7 py-3.5 rounded-full font-semibold text-[15px] hover:bg-brand-forest-deep transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {status === 'loading' ? 'Wird gesendet…' : (
+                      <>Absenden <Send size={15} /></>
+                    )}
+                  </button>
+                  <p className="text-[11px] text-brand-charcoal/45 leading-tight flex-1">
+                    Daten nur zur Anfrage · <a href="/datenschutz" className="underline hover:text-brand-forest">Datenschutz</a>
+                  </p>
+                </div>
               </form>
             )}
           </motion.div>
@@ -316,21 +234,13 @@ export default function Kontakt() {
 }
 
 function Field({
-  label,
-  name,
-  type = 'text',
-  required,
-  placeholder,
+  label, name, type = 'text', required, placeholder,
 }: {
-  label: string
-  name: string
-  type?: string
-  required?: boolean
-  placeholder?: string
+  label: string; name: string; type?: string; required?: boolean; placeholder?: string
 }) {
   return (
     <div>
-      <label className="block text-[12px] uppercase tracking-[0.15em] text-brand-charcoal/70 font-semibold mb-2">
+      <label className="block text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/60 font-semibold mb-1.5">
         {label}
       </label>
       <input
@@ -338,7 +248,7 @@ function Field({
         name={name}
         required={required}
         placeholder={placeholder}
-        className="w-full bg-white border border-brand-ink/15 rounded-sm px-4 py-3 text-[15px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors"
+        className="w-full bg-white border border-brand-ink/15 rounded-sm px-3 py-2.5 text-[14px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors"
       />
     </div>
   )
