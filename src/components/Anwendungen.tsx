@@ -102,26 +102,26 @@ export default function Anwendungen() {
           </p>
         </motion.div>
 
-        {/* Mobile: 2-col equal grid */}
+        {/* Mobile: 2-col equal grid — Wow-first order */}
         <div className="grid grid-cols-2 gap-2 md:hidden" style={{ gridAutoRows: '175px' }}>
           {[...dishes].sort((a, b) => {
-            const order = ['teller','wraps','bowls','ffood','burger','sig']
+            const order = ['sig','bowls','teller','wraps','ffood','burger']
             return order.indexOf(a.gridArea) - order.indexOf(b.gridArea)
           }).map((d, i) => (
             <Card key={d.title} d={d} i={i} />
           ))}
         </div>
 
-        {/* Desktop: Editorial Bento */}
+        {/* Desktop: Editorial Bento — Bowls top-right for color pop next to hero */}
         <div
           className="hidden md:grid gap-4"
           style={{
             gridTemplateColumns: 'repeat(3, 1fr)',
             gridTemplateRows: '280px 280px 240px',
             gridTemplateAreas: `
+              "sig sig bowls"
               "sig sig teller"
-              "sig sig wraps"
-              "bowls ffood burger"
+              "wraps ffood burger"
             `,
           }}
         >
