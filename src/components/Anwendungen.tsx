@@ -5,27 +5,28 @@ type Dish = {
   caption: string
   image: { sm: string; md: string }
   gridArea: string
+  mobileHero?: boolean
 }
 
-// Desktop order: Signature hero-card top-left (2×2), rest fill around it
 const dishes: Dish[] = [
   {
-    title: 'Signature',
-    caption: 'XL. Fine-Dining-Präsentation auf höchstem Niveau.',
-    image: { sm: '/images/falafel-inside-new-sm.webp', md: '/images/falafel-inside-new-md.webp' },
-    gridArea: 'sig',
+    title: 'Dönerbrot',
+    caption: 'Der Klassiker. Im Brot mit Kraut, Tomate, Tahini.',
+    image: { sm: '/images/food-doenerbrot-new-sm.webp', md: '/images/food-doenerbrot-new-md.webp' },
+    gridArea: 'doen',
+    mobileHero: true,
+  },
+  {
+    title: 'Pidebrot',
+    caption: 'Gefülltes Fladenbrot. Sättigend, frisch, beliebt.',
+    image: { sm: '/images/food-pidebrot-new-sm.webp', md: '/images/food-pidebrot-new-md.webp' },
+    gridArea: 'pide',
   },
   {
     title: 'Falafel pur',
     caption: 'Golden, knusprig, sesam-gestreut. Der erste Eindruck zählt.',
     image: { sm: '/images/falafel-arranged-new-sm.webp', md: '/images/falafel-arranged-new-md.webp' },
-    gridArea: 'teller',
-  },
-  {
-    title: 'Dönerbrot',
-    caption: 'Der Klassiker. Im Brot mit Kraut, Tomate, Tahini.',
-    image: { sm: '/images/food-doenerbrot-new-sm.webp', md: '/images/food-doenerbrot-new-md.webp' },
-    gridArea: 'wraps',
+    gridArea: 'falpur',
   },
   {
     title: 'Bowls',
@@ -39,12 +40,6 @@ const dishes: Dish[] = [
     image: { sm: '/images/falafel-group-new-sm.webp', md: '/images/falafel-group-new-md.webp' },
     gridArea: 'ffood',
   },
-  {
-    title: 'Pidebrot',
-    caption: 'Auf türkischem Fladenbrot. Vegan, sättigend, beliebt.',
-    image: { sm: '/images/food-pidebrot-new-sm.webp', md: '/images/food-pidebrot-new-md.webp' },
-    gridArea: 'burger',
-  },
 ]
 
 function Card({ d, i, desktopArea }: { d: Dish; i: number; desktopArea?: boolean }) {
@@ -54,7 +49,7 @@ function Card({ d, i, desktopArea }: { d: Dish; i: number; desktopArea?: boolean
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, delay: i * 0.06, ease: 'easeOut' }}
-      className="group relative overflow-hidden rounded-sm bg-brand-ink h-full min-h-[175px]"
+      className={`group relative overflow-hidden rounded-sm bg-brand-ink h-full min-h-[175px]${d.mobileHero ? ' col-span-2' : ''}`}
       style={desktopArea ? { gridArea: d.gridArea } : undefined}
     >
       <picture>
@@ -102,26 +97,22 @@ export default function Anwendungen() {
           </p>
         </motion.div>
 
-        {/* Mobile: 2-col equal grid — Wow-first order */}
-        <div className="grid grid-cols-2 gap-2 md:hidden" style={{ gridAutoRows: '175px' }}>
-          {[...dishes].sort((a, b) => {
-            const order = ['sig','bowls','teller','wraps','ffood','burger']
-            return order.indexOf(a.gridArea) - order.indexOf(b.gridArea)
-          }).map((d, i) => (
+        {/* Mobile: Dönerbrot full-width hero, rest 2-col */}
+        <div className="grid grid-cols-2 gap-2 md:hidden" style={{ gridAutoRows: '200px' }}>
+          {dishes.map((d, i) => (
             <Card key={d.title} d={d} i={i} />
           ))}
         </div>
 
-        {/* Desktop: Editorial Bento — Bowls top-right for color pop next to hero */}
+        {/* Desktop: Dönerbrot als 2-wide Hero links oben */}
         <div
           className="hidden md:grid gap-4"
           style={{
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gridTemplateRows: '280px 280px 240px',
+            gridTemplateRows: '320px 260px',
             gridTemplateAreas: `
-              "sig sig bowls"
-              "sig sig teller"
-              "wraps ffood burger"
+              "doen doen pide"
+              "falpur bowls ffood"
             `,
           }}
         >
