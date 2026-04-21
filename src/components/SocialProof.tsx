@@ -5,7 +5,7 @@ import { useCountUp } from '../hooks/useCountUp'
 type Stat = { target: number; suffix?: string; label: string; sub: string }
 
 const stats: Stat[] = [
-  { target: 18, suffix: '+', label: 'Jahre Erfahrung', sub: 'Seit 2007 in Berlin' },
+  { target: 19, suffix: '+', label: 'Jahre Erfahrung', sub: 'Seit 2007 in Berlin' },
   { target: 100, suffix: '+', label: 'Gastro-Partner', sub: 'In ganz Deutschland' },
   { target: 4, label: 'Größen', sub: 'XS · S · M · XL' },
   { target: 12, suffix: '+', label: 'Monate haltbar', sub: 'Tiefgefroren geliefert' },

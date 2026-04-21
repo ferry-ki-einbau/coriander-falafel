@@ -53,7 +53,7 @@ export default function Story() {
           >
             <div className="eyebrow mb-5">Unsere Geschichte</div>
             <h2 className="display-lg text-brand-ink mb-8">
-              18 Jahre.<br />
+              19 Jahre.<br />
               Ein Familien&shy;rezept.<br />
               <span className="italic text-brand-forest">Berlin.</span>
             </h2>
