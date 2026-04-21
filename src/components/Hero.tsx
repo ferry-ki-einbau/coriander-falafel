@@ -81,11 +81,16 @@ export default function Hero() {
             Erfahrung.
           </h2>
 
+          {/* Slogan */}
+          <p className="font-script text-2xl md:text-3xl text-brand-sand mb-4">
+            Für die Liebe zum Essen.
+          </p>
+
           {/* Subheadline */}
           <p className="max-w-2xl text-[15px] md:text-[17px] text-brand-cream-soft/85 leading-relaxed mb-6 md:mb-8 font-light">
-            Willkommen bei <strong className="font-medium text-brand-cream-soft">Coriander Falafel</strong> — dein Falafel-Großhandel aus Berlin.
-            Vegane, glutenfreie & halale Falafel in <em className="italic">vier Größen</em> —
-            nach Familienrezept produziert. Für Gastronomen, die das Beste wollen.
+            <strong className="font-medium text-brand-cream-soft">Coriander Falafel</strong> — dein Falafel-Großhandel aus Berlin.
+            Vegan, glutenfrei & halal. In verschiedenen Größen, nach Familienrezept —
+            für Imbisse, Restaurants, Caterer und alle, die das Beste wollen.
           </p>
 
           {/* CTAs */}

@@ -9,7 +9,7 @@ const kunden = [
   { icon: Users, label: 'Caterer', sub: 'Für Events, Hochzeiten und Großveranstaltungen.' },
   { icon: Building2, label: 'Hotels & Kantinen', sub: 'Buffet-tauglich, vegetarisch-freundlich.' },
   { icon: Coffee, label: 'Betriebs\u00ADgastronomie', sub: 'Mitarbeiter-Verpflegung auf Top-Niveau.' },
-  { icon: Sparkles, label: 'Feinschmecker', sub: 'Auch für deine Küche zuhause verfügbar.' },
+  { icon: Sparkles, label: 'Feinschmecker & Kreative', sub: 'Für alle, die zuhause auf Top-Niveau kochen.' },
 ]
 
 export default function FuerWen() {
