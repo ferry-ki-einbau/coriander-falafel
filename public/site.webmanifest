@@ -1,0 +1,12 @@
+{
+  "name": "Coriander Falafel Großhandel",
+  "short_name": "Coriander Falafel",
+  "description": "Premium Falafel-Großhandel aus Berlin. Vegan, glutenfrei, halal. Seit 2007.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF1D3",
+  "theme_color": "#1F4A2C",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "coriander-falafel",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 5175,
+      "cwd": "/Users/watchless/Projects/coriander-falafel"
+    }
+  ]
+}
