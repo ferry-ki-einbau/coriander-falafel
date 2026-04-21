@@ -33,23 +33,23 @@ export default function StickyCTA() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 24, scale: 0.92 }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="fixed z-40 bottom-5 right-5 md:bottom-8 md:right-8 flex flex-col sm:flex-row items-end sm:items-center gap-2"
+          className="fixed z-40 bottom-5 right-5 md:bottom-8 md:right-8 flex items-center gap-2"
         >
-          {/* WhatsApp */}
+          {/* WhatsApp — auf Mobile mit Text, Desktop nur Icon */}
           <a
             href="https://wa.me/4917871199918"
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fba58] text-white pl-4 pr-4 py-3 rounded-full font-semibold text-[14px] shadow-[0_12px_32px_-8px_rgba(37,211,102,0.55)] transition-all"
+            className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fba58] text-white px-4 py-3 md:w-11 md:h-11 md:p-0 md:justify-center rounded-full font-semibold text-[14px] shadow-[0_12px_32px_-8px_rgba(37,211,102,0.55)] transition-all"
             aria-label="WhatsApp schreiben"
           >
             <WhatsAppIcon />
-            <span className="hidden sm:inline">WhatsApp</span>
+            <span className="md:hidden">WhatsApp</span>
           </a>
-          {/* Anfragen */}
+          {/* Anfragen — nur auf Mobile */}
           <a
             href="#kontakt"
-            className="inline-flex items-center gap-2.5 bg-brand-rust hover:bg-brand-rust-dark text-brand-cream-soft pl-5 pr-4 py-3.5 rounded-full font-semibold text-[14.5px] shadow-[0_20px_40px_-12px_rgba(184,65,46,0.55)] transition-all group"
+            className="md:hidden inline-flex items-center gap-2.5 bg-brand-rust hover:bg-brand-rust-dark text-brand-cream-soft pl-5 pr-4 py-3.5 rounded-full font-semibold text-[14.5px] shadow-[0_20px_40px_-12px_rgba(184,65,46,0.55)] transition-all group"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-cream-soft opacity-70" />
