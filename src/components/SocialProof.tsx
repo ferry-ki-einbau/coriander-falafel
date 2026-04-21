@@ -50,7 +50,7 @@ export default function SocialProof() {
         >
           <div className="eyebrow text-brand-sand mb-5">Diese Küchen vertrauen uns</div>
           <h2 className="display-lg text-brand-cream-soft">
-            Über 50 Gastro-Partner.{' '}
+            Über 100 Gastro-Partner.{' '}
             <span className="italic text-brand-sand">Eine Qualität.</span>
           </h2>
         </motion.div>
