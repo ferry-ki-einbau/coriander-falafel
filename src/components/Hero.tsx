@@ -93,18 +93,6 @@ export default function Hero() {
             für Imbisse, Restaurants, Caterer und alle, die das Beste wollen.
           </p>
 
-          {/* Audience ticker */}
-          <div className="w-full overflow-hidden mb-6 md:mb-8">
-            <div className="flex items-center gap-5 animate-[marquee_18s_linear_infinite] whitespace-nowrap md:justify-center md:animate-none md:flex-wrap md:gap-x-5 md:gap-y-1">
-              {['Imbiss', 'Restaurant', 'Caterer', 'Großhandel', 'Hotels', 'Kantinen', 'Food-Truck', 'Großmarkt', 'Imbiss', 'Restaurant', 'Caterer', 'Großhandel', 'Hotels', 'Kantinen', 'Food-Truck', 'Großmarkt'].map((item, i) => (
-                <span key={i} className="flex items-center gap-2 text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-brand-cream-soft/55 font-medium flex-shrink-0">
-                  <span className="w-1 h-1 rounded-full bg-brand-rust/60 flex-shrink-0" />
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-5">
             <a href="#kontakt" className="btn-primary group">
