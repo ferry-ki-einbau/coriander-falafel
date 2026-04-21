@@ -9,14 +9,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 md:gap-12 pb-14 border-b border-brand-cream-soft/10">
           {/* Brand */}
           <div>
-            <img
-              src="/images/logo.webp"
-              alt="Coriander Falafel"
-              width={80}
-              height={80}
-              className="w-20 h-20 mb-5"
-              loading="lazy"
-            />
+            <div className="w-16 h-16 rounded-full overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.35)] mb-5">
+              <img
+                src="/images/logo-crop-sm.webp"
+                alt="Coriander Falafel"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
             <p className="font-serif text-[20px] text-brand-cream-soft leading-snug mb-4 max-w-[28ch]">
               Coriander Falafel.<br />
               <span className="italic text-brand-sand">Dein Falafel-Großhandel aus Berlin.</span>

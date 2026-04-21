@@ -5,6 +5,7 @@ import Story from '../components/Story'
 import WasDrin from '../components/WasDrin'
 import StatementQuote from '../components/StatementQuote'
 import Produkte from '../components/Produkte'
+import Probemuster from '../components/Probemuster'
 import VideoReveal from '../components/VideoReveal'
 import Prozess from '../components/Prozess'
 import FuerWen from '../components/FuerWen'
@@ -26,6 +27,7 @@ export default function Home() {
         <WasDrin />
         <StatementQuote />
         <Produkte />
+        <Probemuster />
         <VideoReveal />
         <Prozess />
         <FuerWen />

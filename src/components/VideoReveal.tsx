@@ -1,55 +1,92 @@
 import { motion } from 'framer-motion'
 
+const zutaten = [
+  'Kichererbsen — eingeweicht, niemals aus der Dose',
+  'Frische Petersilie & Koriander',
+  'Minze aus eigener Auswahl',
+  'Familienrezept-Gewürze seit 2007',
+  'Weißer Sesam',
+]
+
 export default function VideoReveal() {
   return (
-    <section className="relative bg-brand-forest-deep overflow-hidden section-pad">
-      <div className="container-prose">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10 md:mb-14"
-        >
-          <div className="eyebrow text-brand-sand/80 mb-4">Produziert in Berlin</div>
-          <h2 className="font-serif text-[clamp(1.8rem,4.5vw,3.75rem)] font-bold text-brand-cream-soft leading-tight">
-            So entsteht dein Falafel.
-          </h2>
-        </motion.div>
+    <section className="relative bg-brand-forest-deep overflow-hidden">
+      <div className="grid lg:grid-cols-2 min-h-[600px] lg:min-h-[680px]">
 
+        {/* Left — Text */}
         <motion.div
-          initial={{ opacity: 0, y: 30, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="relative rounded-sm overflow-hidden shadow-[0_60px_120px_-20px_rgba(0,0,0,0.8)] aspect-video bg-brand-ink"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col justify-center px-8 py-16 md:px-14 lg:px-16 xl:px-20 lg:py-20"
         >
-          <video
-            src="/video/hero-desktop.mp4"
-            poster="/images/hero-poster-lg.webp"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover opacity-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-forest-deep/60 via-transparent to-brand-forest-deep/20 pointer-events-none" />
-          {/* Corner label */}
-          <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-brand-ink/70 backdrop-blur-sm text-brand-cream-soft/80 text-[11px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-sm">
-            Berlin · Seit 2007
+          <div className="eyebrow text-brand-sand/70 mb-5">Produziert in Berlin</div>
+
+          <h2 className="font-serif text-[clamp(2.2rem,5vw,4rem)] font-bold text-brand-cream-soft leading-[1.08] mb-6">
+            Handgemacht.<br />
+            <span className="italic text-brand-rust">Seit 2007.</span>
+          </h2>
+
+          <p className="text-[16px] md:text-[17px] text-brand-cream-soft/75 leading-relaxed max-w-[44ch] mb-8">
+            Jede Falafel wird nach unserem Familienrezept von Hand geformt. Frische Zutaten, keine Shortcuts — das schmeckt man.
+          </p>
+
+          <ul className="space-y-3 mb-10">
+            {zutaten.map((z, i) => (
+              <motion.li
+                key={z}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 + i * 0.07 }}
+                className="flex items-start gap-3 text-[14px] md:text-[15px] text-brand-cream-soft/80"
+              >
+                <span className="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-brand-rust/20 border border-brand-rust/40 flex items-center justify-center">
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true">
+                    <path d="M1.5 4.5l1.5 1.5 3.5-4" stroke="#B8412E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                {z}
+              </motion.li>
+            ))}
+          </ul>
+
+          <div className="border-t border-brand-cream-soft/10 pt-6">
+            <p className="font-serif italic text-[1.1rem] text-brand-sand/90 leading-relaxed">
+              „Keine Chemie. Keine Konservierung.<br />Keine Kompromisse."
+            </p>
+            <p className="mt-2 text-[12px] text-brand-cream-soft/40 uppercase tracking-[0.2em]">
+              — Abas & Mustafa
+            </p>
           </div>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-6 text-center text-[13px] text-brand-cream-soft/50 leading-relaxed"
+        {/* Right — Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 1.04 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          className="relative min-h-[360px] lg:min-h-0 overflow-hidden"
         >
-          Tiefgefroren in wenigen Minuten goldbraun — in der Fritteuse, im Ofen oder in der Heißluft.
-        </motion.p>
+          <picture>
+            <source media="(min-width: 1024px)" srcSet="/images/zutaten-flatlay-lg.webp" />
+            <source media="(min-width: 560px)" srcSet="/images/zutaten-flatlay-md.webp" />
+            <img
+              src="/images/zutaten-flatlay-sm.webp"
+              alt="Zutaten für Coriander Falafel — Kichererbsen, frische Kräuter, Sesam"
+              className="w-full h-full object-cover object-center"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          {/* Dark edge bleed into left panel on desktop */}
+          <div className="hidden lg:block absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-brand-forest-deep to-transparent" />
+          {/* Bottom fade on mobile */}
+          <div className="lg:hidden absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-forest-deep to-transparent" />
+        </motion.div>
+
       </div>
     </section>
   )

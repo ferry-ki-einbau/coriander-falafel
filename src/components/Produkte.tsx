@@ -9,6 +9,7 @@ type Size = {
   gewicht: string
   useCase: string
   image: string
+  imgScale: string
   bestseller?: boolean
 }
 
@@ -21,6 +22,7 @@ const sizes: Size[] = [
     gewicht: '~ 20 g',
     useCase: 'Snack · Catering-Platten · Bowls',
     image: '/images/produkt-xs-sm.webp',
+    imgScale: 'scale-[0.48]',
   },
   {
     name: 'S',
@@ -30,6 +32,7 @@ const sizes: Size[] = [
     gewicht: '50 g',
     useCase: 'Wraps · Burger · Sandwiches',
     image: '/images/produkt-s-sm.webp',
+    imgScale: 'scale-[0.65]',
     bestseller: true,
   },
   {
@@ -40,6 +43,7 @@ const sizes: Size[] = [
     gewicht: '~ 75 g',
     useCase: 'Teller · Bowls · Gastro-Standard',
     image: '/images/produkt-m-sm.webp',
+    imgScale: 'scale-[0.82]',
   },
   {
     name: 'XL',
@@ -49,6 +53,7 @@ const sizes: Size[] = [
     gewicht: '~ 130 g',
     useCase: 'Premium-Teller · Fine-Dining',
     image: '/images/produkt-xl-md.webp',
+    imgScale: 'scale-[1.0]',
   },
 ]
 
@@ -103,7 +108,7 @@ export default function Produkte() {
                   alt={`Falafel Größe ${size.name}`}
                   width={400}
                   height={400}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.05] ${size.imgScale}`}
                   loading="lazy"
                   decoding="async"
                 />
