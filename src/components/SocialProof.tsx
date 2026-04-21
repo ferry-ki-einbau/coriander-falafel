@@ -68,18 +68,6 @@ export default function SocialProof() {
           transition={{ duration: 1, delay: 0.4 }}
           className="mt-8 md:mt-24 pt-8 md:pt-12 border-t border-brand-cream-soft/10"
         >
-          <div className="text-[11px] uppercase tracking-[0.22em] text-brand-cream-soft/50 mb-5 text-center">
-            Beliefern wir deutschlandweit
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[15px] md:text-[17px] font-serif text-brand-cream-soft/80 mb-10 md:mb-14">
-            {['Berlin', 'Hamburg', 'München', 'Frankfurt', 'Köln', 'Stuttgart', 'Düsseldorf', 'Bremen'].map((city) => (
-              <span key={city} className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-brand-sand inline-block" />
-                {city}
-              </span>
-            ))}
-          </div>
-
           <div className="text-center">
             <p className="font-script text-2xl md:text-3xl text-brand-sand mb-3">
               &ldquo;Wir produzieren jeden Tag so,
