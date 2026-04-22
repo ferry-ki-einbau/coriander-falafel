@@ -3,7 +3,7 @@ import { Check, X } from 'lucide-react'
 
 const drin = [
   { label: 'Feinste Kichererbsen', sub: 'Sortenreine Auswahl, eingeweicht – niemals aus der Dose.' },
-  { label: 'Frische Kräuter', sub: 'Petersilie, Koriander und Minze – täglich frisch verarbeitet.' },
+  { label: 'Frische Kräuter', sub: 'Petersilie und Koriander – täglich frisch verarbeitet.' },
   { label: 'Familienrezept-Gewürze', sub: 'Die Mischung, die uns seit 19 Jahren unterscheidet.' },
   { label: 'Weißer Sesam', sub: 'Handgestreut – für den signature Knuspereffekt.' },
   { label: 'Pure Liebe', sub: 'Kein Marketing-Spruch. Eine Arbeitsweise.' },

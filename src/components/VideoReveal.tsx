@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 const zutaten = [
   'Kichererbsen — eingeweicht, niemals aus der Dose',
   'Frische Petersilie & Koriander',
-  'Minze aus eigener Auswahl',
   'Familienrezept-Gewürze seit 2007',
   'Weißer Sesam',
 ]
