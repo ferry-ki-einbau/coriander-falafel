@@ -17,9 +17,9 @@ const dishes: Dish[] = [
     mobileHero: true,
   },
   {
-    title: 'Pidebrot',
-    caption: 'Gefülltes Fladenbrot. Sättigend, frisch, beliebt.',
-    image: { sm: '/images/food-pidebrot-new-sm.webp', md: '/images/food-pidebrot-new-md.webp' },
+    title: 'Mezze & Catering',
+    caption: 'Hummus, Tahini, Tabbouleh. Die perfekte Platte.',
+    image: { sm: '/images/food-mezze-new-sm.webp', md: '/images/food-mezze-new-md.webp' },
     gridArea: 'pide',
   },
   {
