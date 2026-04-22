@@ -7,9 +7,9 @@ export const config = {
 }
 
 const schema = z.object({
-  name: z.string().min(2).max(120),
+  name: z.string().min(1).max(120),
   firma: z.string().min(1).max(160),
-  email: z.string().email().max(160),
+  email: z.string().min(1).max(160).refine(s => s.includes('@'), { message: 'Bitte eine E-Mail-Adresse angeben.' }),
   telefon: z.string().max(40).optional().default(''),
   interesse: z.string().max(60).optional().default(''),
   menge: z.string().max(60).optional().default(''),

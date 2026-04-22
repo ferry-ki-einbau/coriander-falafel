@@ -118,9 +118,9 @@ export default function Kontakt() {
 
             {/* Email + Adresse */}
             <div className="space-y-3 text-[14px] text-brand-cream-soft/60">
-              <a href="mailto:coriander-falafel@hotmail.com" className="flex items-center gap-3 hover:text-brand-sand transition-colors">
+              <a href="mailto:info@coriander-falafel.de" className="flex items-center gap-3 hover:text-brand-sand transition-colors">
                 <Mail size={15} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand" />
-                coriander-falafel@hotmail.com
+                info@coriander-falafel.de
               </a>
               <div className="flex items-center gap-3">
                 <MapPin size={15} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand" />
@@ -165,7 +165,7 @@ export default function Kontakt() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <Field label="Email *" name="email" type="email" required />
+                  <Field label="Email *" name="email" type="text" required placeholder="deine@email.de" />
                   <Field label="Telefon" name="telefon" type="tel" />
                 </div>
 
