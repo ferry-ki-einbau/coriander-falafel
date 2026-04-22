@@ -40,7 +40,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const resendKey = process.env.RESEND_API_KEY
   const tgToken = process.env.TELEGRAM_BOT_TOKEN
   const tgChat = process.env.TELEGRAM_CHAT_ID
-  const fromAddr = process.env.MAIL_FROM || 'Coriander Falafel <anfrage@coriander-falafel.de>'
+  const fromAddr = process.env.MAIL_FROM || 'Coriander Falafel <info@coriander-falafel.de>'
   const toAddr = process.env.MAIL_TO || 'coriander-falafel@hotmail.com'
   const replyTo = data.email
 
