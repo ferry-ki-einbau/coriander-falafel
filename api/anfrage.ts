@@ -285,7 +285,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const tgToken = process.env.TELEGRAM_BOT_TOKEN
   const tgChat = process.env.TELEGRAM_CHAT_ID
   const fromAddr = process.env.MAIL_FROM || 'Coriander Falafel <info@coriander-falafel.de>'
-  const toAddr = process.env.MAIL_TO || 'coriander-falafel@hotmail.com'
+  const toAddr = process.env.MAIL_TO || 'info@coriander-falafel.de'
 
   if (!resendKey) {
     console.error('RESEND_API_KEY fehlt')
