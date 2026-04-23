@@ -5,6 +5,7 @@ const drin = [
   { label: 'Feinste Kichererbsen', sub: 'Sortenreine Auswahl, eingeweicht – niemals aus der Dose.' },
   { label: 'Frische Kräuter', sub: 'Petersilie und Koriander – täglich frisch verarbeitet.' },
   { label: 'Familienrezept-Gewürze', sub: 'Die Mischung, die uns seit 19 Jahren unterscheidet.' },
+  { label: 'Frischer Knoblauch', sub: 'Täglich frisch – kein Pulver, kein Extrakt.' },
   { label: 'Weißer Sesam', sub: 'Handgestreut – für den signature Knuspereffekt.' },
   { label: 'Pure Liebe', sub: 'Kein Marketing-Spruch. Eine Arbeitsweise.' },
   { label: 'High Protein & Ballaststoffe', sub: 'Natürlich sättigend – ohne Zusätze.' },
