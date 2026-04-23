@@ -33,7 +33,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <section className="section-pad relative bg-brand-cream-soft">
+    <section id="faq" className="section-pad relative bg-brand-cream-soft">
       <div className="container-prose">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,6 +65,7 @@ export default function FAQ() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-center justify-between gap-6 py-5 md:py-6 text-left group"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${i}`}
                 >
                   <span className="font-serif text-[18px] md:text-[22px] font-semibold text-brand-ink group-hover:text-brand-forest transition-colors leading-snug">
                     {f.q}
@@ -87,7 +88,7 @@ export default function FAQ() {
                       transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-5 md:pb-8 pr-12 text-[15px] md:text-[16px] leading-relaxed text-brand-charcoal/85">
+                      <div id={`faq-answer-${i}`} className="pb-5 md:pb-8 pr-12 text-[15px] md:text-[16px] leading-relaxed text-brand-charcoal/85">
                         {f.a}
                       </div>
                     </motion.div>

@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <video
           src="/video/hero-desktop.mp4"
-          poster="/images/hero-poster-lg.webp"
+          poster="/images/hero-poster-md.webp"
           autoPlay
           muted
           loop
@@ -48,6 +48,7 @@ export default function Hero() {
               className="w-full h-full object-cover object-center scale-[1.06]"
               loading="eager"
               decoding="sync"
+              fetchPriority="high"
             />
           </motion.div>
 
@@ -59,7 +60,7 @@ export default function Hero() {
           </div>
 
           {/* Main headline */}
-          <h1 className="display-xl text-brand-cream-soft mb-2">
+          <h1 className="display-xl text-brand-cream-soft mb-6 md:mb-7">
             Mit über{' '}
             <span className="relative inline-block">
               <span className="italic text-brand-rust">19 Jahren</span>
@@ -78,10 +79,8 @@ export default function Hero() {
                 />
               </svg>
             </span>
+            {' '}<span className="font-serif italic">Erfahrung.</span>
           </h1>
-          <h2 className="display-xl font-serif italic text-brand-cream-soft/95 mb-6 md:mb-7">
-            Erfahrung.
-          </h2>
 
           {/* Slogan */}
           <p className="font-script text-2xl md:text-3xl text-brand-sand mb-4">

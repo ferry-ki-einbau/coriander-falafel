@@ -56,7 +56,9 @@ function Card({ d, i, desktopArea }: { d: Dish; i: number; desktopArea?: boolean
         <source media="(min-width: 768px)" srcSet={d.image.md} />
         <img
           src={d.image.sm}
-          alt={d.title}
+          alt={`${d.title} mit Coriander Falafel — ${d.caption}`}
+          width={600}
+          height={400}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
           loading="lazy"
           decoding="async"

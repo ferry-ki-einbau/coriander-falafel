@@ -37,7 +37,7 @@ export default function StickyCTA() {
         >
           {/* WhatsApp — auf Mobile mit Text, Desktop nur Icon */}
           <a
-            href="https://wa.me/4917871199918"
+            href="https://wa.me/4917624831232"
             target="_blank"
             rel="noopener"
             className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1fba58] text-white px-4 py-3 md:w-11 md:h-11 md:p-0 md:justify-center rounded-full font-semibold text-[14px] shadow-[0_12px_32px_-8px_rgba(37,211,102,0.55)] transition-all"
