@@ -17,10 +17,12 @@ export default function Hero() {
           aria-hidden="true"
           className="h-full w-full object-cover opacity-85"
         />
-        {/* Warm dark gradient — no green, just depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-brand-ink/80" />
-        {/* Warm amber radial glow at center */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(245,180,80,0.08)_0%,_transparent_65%)]" />
+        {/* Gradient overlay — strong enough to guarantee text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/50 to-brand-ink/90" />
+        {/* Extra center scrim so text always pops */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_70%_at_50%_50%,_rgba(0,0,0,0.35)_0%,_transparent_70%)]" />
+        {/* Warm amber radial glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(245,180,80,0.07)_0%,_transparent_60%)]" />
       </div>
 
       {/* Content */}
@@ -87,7 +89,7 @@ export default function Hero() {
           </p>
 
           {/* Subheadline */}
-          <p className="max-w-2xl text-[15px] md:text-[17px] text-brand-cream-soft/85 leading-relaxed mb-6 md:mb-8 font-light">
+          <p className="max-w-2xl text-[15px] md:text-[17px] text-brand-cream-soft/95 leading-relaxed mb-6 md:mb-8 font-normal">
             <strong className="font-medium text-brand-cream-soft">Coriander Falafel</strong> — dein Falafel-Großhandel aus Berlin.
             Vegan, glutenfrei & halal. In verschiedenen Größen, nach Familienrezept —
             für Imbisse, Restaurants, Caterer und alle, die das Beste wollen.
@@ -106,7 +108,7 @@ export default function Hero() {
           </div>
 
           {/* Mikro-Stats */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12px] md:text-[13px] text-brand-cream-soft/75 mb-5 md:mb-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12px] md:text-[13px] text-brand-cream-soft/90 mb-5 md:mb-6">
             <span className="flex items-center gap-2">
               <Check3 /> Proben gratis
             </span>
