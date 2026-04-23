@@ -32,9 +32,8 @@ export default function Impressum() {
             <section>
               <h2 className="font-serif text-[22px] font-bold text-brand-ink mb-3">Kontakt</h2>
               <p>
-                Telefon: <a href="tel:+4917624831232" className="text-brand-forest underline">0176 24 83 12 32</a> (Abas Kasim Mahmood)<br />
-                Telefon: <a href="tel:+4917871199918" className="text-brand-forest underline">0178 711 99 18</a> (Mustafa Kassim)<br />
-                E-Mail: <a href="mailto:coriander-falafel@hotmail.com" className="text-brand-forest underline">coriander-falafel@hotmail.com</a>
+                Telefon: <a href="tel:+4917624831232" className="text-brand-forest underline">0176 24 83 12 32</a><br />
+                E-Mail: <a href="mailto:info@coriander-falafel.de" className="text-brand-forest underline">info@coriander-falafel.de</a>
               </p>
             </section>
 

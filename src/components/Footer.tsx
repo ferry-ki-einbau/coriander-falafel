@@ -24,7 +24,7 @@ export default function Footer() {
               <span className="italic text-brand-sand">Dein Falafel-Großhandel aus Berlin.</span>
             </p>
             <p className="text-[13.5px] text-brand-cream-soft/60 leading-relaxed max-w-[38ch]">
-              Vegan · Glutenfrei · Halal · Handmade. Seit 2007 — für Gastronomen, die keine Kompromisse machen.
+              Vegan · Glutenfrei · Halal · Handmade. Seit 2007 — für Gastronomen, Imbisse, Caterer &amp; Großhändler, die keine Kompromisse machen.
             </p>
           </div>
 
@@ -46,19 +46,13 @@ export default function Footer() {
               <li>
                 <a href="tel:+4917624831232" className="flex items-start gap-2 hover:text-brand-sand transition-colors">
                   <Phone size={14} strokeWidth={1.8} className="flex-shrink-0 mt-1" />
-                  <span>0176 24 83 12 32<br /><span className="text-[12px] text-brand-cream-soft/55">Abas Kasim Mahmood</span></span>
+                  <span>0176 24 83 12 32<br /><span className="text-[12px] text-brand-cream-soft/55">Abas Kasim & Mustafa Kassim</span></span>
                 </a>
               </li>
               <li>
-                <a href="tel:+4917871199918" className="flex items-start gap-2 hover:text-brand-sand transition-colors">
-                  <Phone size={14} strokeWidth={1.8} className="flex-shrink-0 mt-1" />
-                  <span>0178 711 99 18<br /><span className="text-[12px] text-brand-cream-soft/55">Mustafa Kassim</span></span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:coriander-falafel@hotmail.com" className="flex items-start gap-2 hover:text-brand-sand transition-colors break-all">
+                <a href="mailto:info@coriander-falafel.de" className="flex items-start gap-2 hover:text-brand-sand transition-colors break-all">
                   <Mail size={14} strokeWidth={1.8} className="flex-shrink-0 mt-1" />
-                  <span>coriander-falafel@hotmail.com</span>
+                  <span>info@coriander-falafel.de</span>
                 </a>
               </li>
               <li>

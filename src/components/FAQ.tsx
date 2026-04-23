@@ -5,11 +5,11 @@ import { Plus } from 'lucide-react'
 const faqs = [
   {
     q: 'Wie werden die Falafel geliefert?',
-    a: 'Tiefgefroren, in Beuteln à 50 Stück. Haltbar über 12 Monate bei -18 °C. Lieferung deutschlandweit über unseren Logistik-Partner — Mindestbestellmenge und Lieferfenster besprechen wir individuell.',
+    a: 'Frisch zubereitet und tiefgefroren, oder als Rohmasse (Teilfertigware) lieferbar. Haltbar über 6 Monate bei Tiefkühlung. Lieferung deutschlandweit — Mindestbestellmenge und Lieferfenster besprechen wir individuell.',
   },
   {
     q: 'Welche Größen gibt es?',
-    a: 'Standardmäßig XS (Finger-Food, ca. 20 g), S (5 cm Ø, 50 g — die Gastro-Standardgröße), M (ca. 75 g) und XL (ca. 130 g, für Premium-Teller). Individuelle Größen und Formen produzieren wir auf Anfrage.',
+    a: 'Wir haben bewährte Bestseller-Größen für Finger-Food, Wraps, Bowls und Premium-Teller. Individuelle Größen, Formen und Rezepturen produzieren wir ab einer gewissen Abnahmemenge gerne nach deiner Vorstellung — sprich uns direkt an.',
   },
   {
     q: 'Sind eure Falafel wirklich vegan und halal?',
@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Wie bereitet man die Falafel zu?',
-    a: 'Direkt aus dem Gefrierschrank in die Fritteuse (170 °C, ca. 3–4 Minuten), den Ofen (200 °C, ca. 10–12 Minuten) oder die Heißluftfritteuse. Kein Auftauen nötig — außen knusprig, innen saftig.',
+    a: 'Aus dem Tiefkühlschrank auftauen lassen, dann in die Fritteuse, den Ofen, den Airfryer oder die Pfanne — außen knusprig, innen saftig und grün. Wir beraten gerne bei der Zubereitung und senden dir auch eine Anleitung für deine Systemgastronomie.',
   },
   {
     q: 'Könnt ihr Sonderwünsche produzieren?',
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Wie läuft die erste Bestellung ab?',
-    a: 'Unverbindliche Anfrage über unser Formular oder WhatsApp — wir rufen zurück, klären Mengen, Größen und Konditionen. Auf Wunsch senden wir Probemuster. Erstlieferung meist innerhalb von 5–10 Werktagen.',
+    a: 'Unverbindliche Anfrage über unser Formular oder WhatsApp — wir rufen zurück, klären Mengen, Größen und Konditionen. Auf Wunsch senden wir Proben. Gekühlter Expressversand meist in 3–4 Tagen.',
   },
 ]
 

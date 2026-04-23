@@ -28,7 +28,6 @@ export default function Kontakt() {
       email: String(fd.get('email') || ''),
       telefon: String(fd.get('telefon') || ''),
       interesse: String(fd.get('interesse') || ''),
-      menge: String(fd.get('menge') || ''),
       nachricht: String(fd.get('nachricht') || ''),
       website: String(fd.get('website') || ''),
     }
@@ -73,12 +72,12 @@ export default function Kontakt() {
               <span className="italic text-brand-sand">Direkt. Ehrlich.</span>
             </h2>
             <p className="text-[16px] text-brand-cream-soft/65 leading-relaxed mb-8 max-w-[40ch]">
-              Probebeutel gratis · Antwort in 24 h · Unverbindlich
+              Proben gratis · Antwort innerhalb weniger Stunden · Unverbindlich
             </p>
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/4917871199918?text=Hallo%2C%20ich%20habe%20Interesse%20an%20euren%20Falafel%20f%C3%BCr%20mein%20Restaurant."
+              href="https://wa.me/4917624831232?text=Hallo%2C%20ich%20habe%20Interesse%20an%20euren%20Falafel%20f%C3%BCr%20mein%20Restaurant."
               target="_blank"
               rel="noopener"
               className="group flex items-center gap-4 bg-[#25D366] hover:bg-[#1fba58] text-white rounded-sm px-5 py-4 mb-8 transition-colors shadow-[0_8px_32px_-8px_rgba(37,211,102,0.5)]"
@@ -88,7 +87,7 @@ export default function Kontakt() {
               </div>
               <div className="flex-1">
                 <div className="font-semibold text-[15px] leading-tight">Direkt per WhatsApp</div>
-                <div className="text-[12px] text-white/75 mt-0.5">Mustafa antwortet meist in &lt; 1 Stunde</div>
+                <div className="text-[12px] text-white/75 mt-0.5">Wir antworten</div>
               </div>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="group-hover:translate-x-0.5 transition-transform">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -96,24 +95,19 @@ export default function Kontakt() {
             </a>
 
             {/* Gründer */}
-            <div className="grid grid-cols-2 gap-3 mb-8">
-              {[
-                { name: 'Abas Kasim Mahmood', role: 'Großhandel', tel: '+4917624831232', display: '0176 24 83 12 32' },
-                { name: 'Mustafa Kassim', role: 'Produktion', tel: '+4917871199918', display: '0178 711 99 18' },
-              ].map((p) => (
-                <div key={p.name} className="bg-brand-cream-soft/[0.05] border border-brand-cream-soft/10 rounded-sm p-4">
-                  <div className="font-serif text-[15px] font-semibold text-brand-cream-soft leading-tight mb-0.5">{p.name.split(' ')[0]}</div>
-                  <div className="text-[11px] text-brand-cream-soft/50 uppercase tracking-[0.12em] mb-3">{p.role}</div>
-                  <a href={`tel:${p.tel}`} className="flex items-center gap-2 text-[13px] text-brand-cream-soft/80 hover:text-brand-sand transition-colors mb-1.5">
-                    <Phone size={13} strokeWidth={1.8} />
-                    {p.display}
-                  </a>
-                  <a href={`https://wa.me/${p.tel.replace('+', '')}`} target="_blank" rel="noopener" className="flex items-center gap-2 text-[13px] text-[#25D366] hover:text-[#1fba58] transition-colors">
-                    <WhatsAppIcon />
-                    WhatsApp
-                  </a>
-                </div>
-              ))}
+            <div className="mb-8">
+              <div className="bg-brand-cream-soft/[0.05] border border-brand-cream-soft/10 rounded-sm p-4">
+                <div className="font-serif text-[15px] font-semibold text-brand-cream-soft leading-tight mb-0.5">Abas Kasim & Mustafa Kassim</div>
+                <div className="text-[11px] text-brand-cream-soft/50 uppercase tracking-[0.12em] mb-3">Gründer und Berater</div>
+                <a href="tel:+4917624831232" className="flex items-center gap-2 text-[13px] text-brand-cream-soft/80 hover:text-brand-sand transition-colors mb-1.5">
+                  <Phone size={13} strokeWidth={1.8} />
+                  0176 24 83 12 32
+                </a>
+                <a href="https://wa.me/4917624831232" target="_blank" rel="noopener" className="flex items-center gap-2 text-[13px] text-[#25D366] hover:text-[#1fba58] transition-colors">
+                  <WhatsAppIcon />
+                  WhatsApp
+                </a>
+              </div>
             </div>
 
             {/* Email + Adresse */}
@@ -122,9 +116,9 @@ export default function Kontakt() {
                 <Mail size={15} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand" />
                 info@coriander-falafel.de
               </a>
-              <div className="flex items-center gap-3">
-                <MapPin size={15} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand" />
-                Turiner Str. 24 · 13347 Berlin
+              <div className="flex items-start gap-3">
+                <MapPin size={15} strokeWidth={1.8} className="flex-shrink-0 text-brand-sand mt-0.5" />
+                <span>Turiner Str. 24 · 13347 Berlin<br /><span className="text-[12px] text-brand-cream-soft/45">Bitte nicht unangekündigt vorbeikommen</span></span>
               </div>
             </div>
           </motion.div>
@@ -169,26 +163,20 @@ export default function Kontakt() {
                   <Field label="Telefon" name="telefon" type="tel" />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/60 font-semibold mb-1.5">
-                      Interesse
-                    </label>
-                    <select
-                      name="interesse"
-                      defaultValue=""
-                      className="w-full bg-white border border-brand-ink/15 rounded-sm px-3 py-2.5 text-[14px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors"
-                    >
-                      <option value="" disabled>Bitte wählen</option>
-                      <option value="XS">XS — Finger-Food</option>
-                      <option value="S">S — Standard</option>
-                      <option value="M">M — Mid-Size</option>
-                      <option value="XL">XL — Premium</option>
-                      <option value="Individuell">Individuell</option>
-                      <option value="Probebeutel">Probebeutel</option>
-                    </select>
-                  </div>
-                  <Field label="Menge/Monat" name="menge" placeholder="z. B. 50 Beutel" />
+                <div>
+                  <label className="block text-[11px] uppercase tracking-[0.15em] text-brand-charcoal/60 font-semibold mb-1.5">
+                    Interesse
+                  </label>
+                  <select
+                    name="interesse"
+                    defaultValue=""
+                    className="w-full bg-white border border-brand-ink/15 rounded-sm px-3 py-2.5 text-[14px] text-brand-ink focus:outline-none focus:border-brand-forest transition-colors"
+                  >
+                    <option value="" disabled>Bitte wählen</option>
+                    <option value="Individuell">Individuelles Produkt</option>
+                    <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
+                    <option value="Beratung">Beratung</option>
+                  </select>
                 </div>
 
                 <div>

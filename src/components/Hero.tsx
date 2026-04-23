@@ -99,19 +99,19 @@ export default function Hero() {
               Angebot anfragen
               <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
-            <a href="tel:+4917871199918" className="btn-outline group">
+            <a href="tel:+4917624831232" className="btn-outline group">
               <Phone size={17} />
-              0178 711 9918
+              0176 24 83 12 32
             </a>
           </div>
 
           {/* Mikro-Stats */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[12px] md:text-[13px] text-brand-cream-soft/75 mb-5 md:mb-6">
             <span className="flex items-center gap-2">
-              <Check3 /> Probebeutel gratis
+              <Check3 /> Proben gratis
             </span>
             <span className="flex items-center gap-2">
-              <Check3 /> Antwort in 24 h
+              <Check3 /> Antwort innerhalb weniger Stunden
             </span>
             <span className="flex items-center gap-2">
               <Check3 /> Unverbindlich
