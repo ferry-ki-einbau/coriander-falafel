@@ -5,10 +5,10 @@ import { useCountUp } from '../hooks/useCountUp'
 type Stat = { target: number; suffix?: string; label: string; sub: string }
 
 const stats: Stat[] = [
-  { target: 19, suffix: '+', label: 'Jahre Erfahrung', sub: 'Seit 2007 in Berlin' },
+  { target: 19, suffix: '+', label: 'Jahre Erfahrung', sub: 'Seit 2007 in Berlin · seit 1960 in der Heimat' },
   { target: 100, suffix: '+', label: 'Gastro-Partner', sub: 'In ganz Deutschland' },
-  { target: 4, label: 'Größen', sub: 'XS · S · M · XL' },
-  { target: 12, suffix: '+', label: 'Monate haltbar', sub: 'Tiefgefroren geliefert' },
+  { target: 4, suffix: '+', label: 'Größen', sub: '4 verschiedene Größen & Falafelrohteigmasse' },
+  { target: 6, suffix: '+', label: 'Monate haltbar', sub: 'Tiefgefroren geliefert' },
 ]
 
 function StatTile({ s, i }: { s: Stat; i: number }) {
@@ -78,6 +78,9 @@ export default function SocialProof() {
             <div className="mt-6 text-[13px] uppercase tracking-[0.2em] text-brand-cream-soft/60">
               — Abas &amp; Mustafa · Gründer
             </div>
+            <p className="font-script text-xl md:text-2xl text-brand-sand/70 mt-4">
+              Für die Liebe zum Essen.
+            </p>
           </div>
         </motion.div>
       </div>

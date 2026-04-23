@@ -6,7 +6,7 @@ const kunden = [
   { icon: UtensilsCrossed, label: 'Restaurants', sub: 'Premium-Falafel ohne eigene Produktion.' },
   { icon: ChefHat, label: 'Gastronomen', sub: 'Konstante Qualität, skalierbare Mengen.' },
   { icon: Truck, label: 'Großhändler', sub: 'Regelmäßige Lieferung, feste Konditionen.' },
-  { icon: Users, label: 'Caterer', sub: 'Für Events, Hochzeiten und Großveranstaltungen.' },
+  { icon: Users, label: 'Caterer groß & klein', sub: 'Für Events, Hochzeiten und Großveranstaltungen.' },
   { icon: Building2, label: 'Hotels & Kantinen', sub: 'Buffet-tauglich, vegetarisch-freundlich.' },
   { icon: Coffee, label: 'Betriebs\u00ADgastronomie', sub: 'Mitarbeiter-Verpflegung auf Top-Niveau.' },
   { icon: Sparkles, label: 'Feinschmecker & Kreative', sub: 'Für Konzepte, die aus der Masse herausstechen.' },
