@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { UtensilsCrossed, ChefHat, Building2, Truck, Coffee, Users, Sparkles, Store } from 'lucide-react'
 
@@ -13,6 +14,8 @@ const kunden = [
 ]
 
 export default function FuerWen() {
+  const [active, setActive] = useState<number | null>(null)
+
   return (
     <section className="section-pad relative bg-brand-forest-deep">
       <div className="container-prose">
@@ -38,7 +41,8 @@ export default function FuerWen() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group relative bg-brand-cream-soft/5 border border-brand-cream-soft/10 rounded-sm p-4 md:p-6 hover:bg-brand-cream-soft/10 hover:border-brand-sand/30 transition-all duration-300"
+              className="group relative bg-brand-cream-soft/5 border border-brand-cream-soft/10 rounded-sm p-4 md:p-6 hover:bg-brand-cream-soft/10 hover:border-brand-sand/30 transition-all duration-300 cursor-pointer sm:cursor-default"
+              onClick={() => setActive(active === i ? null : i)}
             >
               <k.icon
                 size={24}
@@ -48,7 +52,7 @@ export default function FuerWen() {
               <div className="font-serif text-[14px] md:text-[20px] font-semibold text-brand-cream-soft mb-1">
                 {k.label}
               </div>
-              <div className="text-[12px] md:text-[13.5px] leading-relaxed text-brand-cream-soft/60 hidden sm:block">
+              <div className={`text-[12px] md:text-[13.5px] leading-relaxed text-brand-cream-soft/60 transition-all duration-200 ${active === i ? 'block' : 'hidden'} sm:block`}>
                 {k.sub}
               </div>
             </motion.div>
