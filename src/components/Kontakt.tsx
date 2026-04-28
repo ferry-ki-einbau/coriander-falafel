@@ -77,7 +77,7 @@ export default function Kontakt() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/4917624831232?text=Hallo%2C%20ich%20habe%20Interesse%20an%20euren%20Falafel%20f%C3%BCr%20mein%20Restaurant."
+              href="https://wa.me/4917624831232"
               target="_blank"
               rel="noopener"
               className="group flex items-center gap-4 bg-[#25D366] hover:bg-[#1fba58] text-white rounded-sm px-5 py-4 mb-8 transition-colors shadow-[0_8px_32px_-8px_rgba(37,211,102,0.5)]"
@@ -97,7 +97,7 @@ export default function Kontakt() {
             {/* Gründer */}
             <div className="mb-8">
               <div className="bg-brand-cream-soft/[0.05] border border-brand-cream-soft/10 rounded-sm p-4">
-                <div className="font-serif text-[15px] font-semibold text-brand-cream-soft leading-tight mb-0.5">Abas Kasim & Mustafa Kassim</div>
+                <div className="font-serif text-[15px] font-semibold text-brand-cream-soft leading-tight mb-0.5">Abas & Mustafa</div>
                 <div className="text-[11px] text-brand-cream-soft/50 uppercase tracking-[0.12em] mb-3">Gründer und Berater</div>
                 <a href="tel:+4917624831232" className="flex items-center gap-2 text-[13px] text-brand-cream-soft/80 hover:text-brand-sand transition-colors mb-1.5">
                   <Phone size={13} strokeWidth={1.8} />

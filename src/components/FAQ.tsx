@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Wie bereitet man die Falafel zu?',
-    a: 'Aus dem Tiefkühlschrank auftauen lassen, dann in die Fritteuse, den Ofen, den Airfryer oder die Pfanne — außen knusprig, innen saftig und grün. Wir beraten gerne bei der Zubereitung und senden dir auch eine Anleitung für deine Systemgastronomie.',
+    a: 'Aus dem Tiefkühlschrank auftauen lassen, dann in die Fritteuse, den Ofen, den Airfryer oder die Pfanne — oder viele weitere Anwendungsmöglichkeiten. Außen knusprig, innen saftig und grün. Wir beraten gerne bei der Zubereitung und senden dir auch eine Anleitung für deine Systemgastronomie.',
   },
   {
     q: 'Könnt ihr Sonderwünsche produzieren?',
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Wie läuft die erste Bestellung ab?',
-    a: 'Unverbindliche Anfrage über unser Formular oder WhatsApp — wir rufen zurück, klären Mengen, Größen und Konditionen. Auf Wunsch senden wir Proben. Gekühlter Expressversand meist in 3–4 Tagen.',
+    a: 'Anrufen, WhatsApp oder Formular — ganz wie es dir passt. Wir rufen zurück, klären Mengen, Größen und Konditionen. Auf Wunsch liefern wir Proben. Gekühlter Expressversand meist in 3–4 Tagen.',
   },
 ]
 

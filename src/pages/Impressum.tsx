@@ -25,7 +25,7 @@ export default function Impressum() {
               <h2 className="font-serif text-[22px] font-bold text-brand-ink mb-3">Vertreten durch</h2>
               <p>
                 Abas Kasim Mahmood<br />
-                Mustafa Kassim
+                Mustafa
               </p>
             </section>
 
@@ -51,7 +51,7 @@ export default function Impressum() {
             <section>
               <h2 className="font-serif text-[22px] font-bold text-brand-ink mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
               <p>
-                Abas Kasim Mahmood &amp; Mustafa Kassim<br />
+                Abas Kasim Mahmood &amp; Mustafa<br />
                 Turiner Str. 24, 13347 Berlin
               </p>
             </section>

@@ -37,7 +37,7 @@ export default function Probemuster() {
             className="flex flex-col sm:flex-row gap-3 flex-shrink-0"
           >
             <a
-              href="https://wa.me/4917624831232?text=Hallo%2C%20ich%20w%C3%BCrde%20gerne%20kostenlose%20Proben%20anfragen."
+              href="https://wa.me/4917624831232"
               target="_blank"
               rel="noopener"
               className="inline-flex items-center justify-center gap-2.5 bg-white text-brand-rust px-7 py-4 rounded-full font-bold text-[15px] hover:bg-brand-cream-soft transition-colors shadow-[0_8px_24px_rgba(0,0,0,0.2)]"

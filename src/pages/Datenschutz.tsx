@@ -15,7 +15,7 @@ export default function Datenschutz() {
               <h2 className="font-serif text-[22px] font-bold text-brand-ink mb-3">1. Verantwortlicher</h2>
               <p>
                 Coriander Falafel Großhandel<br />
-                Abas Kasim Mahmood &amp; Mustafa Kassim<br />
+                Abas Kasim Mahmood &amp; Mustafa<br />
                 Turiner Str. 24, 13347 Berlin<br />
                 E-Mail: coriander-falafel@hotmail.com
               </p>

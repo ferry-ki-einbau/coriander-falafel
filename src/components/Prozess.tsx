@@ -14,7 +14,7 @@ const steps = [
     icon: Package,
     titel: 'Probebeutel',
     sub: 'In 3 Tagen',
-    text: 'Auf Wunsch schicken wir dir Proben zum Testen. Fritteuse, Ofen, Heißluft oder viele weitere Anwendungsmöglichkeiten, zu denen wir dich gerne beraten — du entscheidest. Wir machen die Falafel passend zu euch.',
+    text: 'Auf Wunsch liefern wir dir Proben zum Testen. Fritteuse, Ofen, Heißluft oder viele weitere Anwendungsmöglichkeiten, zu denen wir dich gerne beraten — du entscheidest. Wir machen die Falafel passend zu euch.',
   },
   {
     nr: '03',

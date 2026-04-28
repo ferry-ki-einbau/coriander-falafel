@@ -51,7 +51,7 @@ export default function Footer() {
               <li>
                 <a href="tel:+4917624831232" className="flex items-start gap-2 hover:text-brand-sand transition-colors">
                   <Phone size={14} strokeWidth={1.8} className="flex-shrink-0 mt-1" />
-                  <span>0176 24 83 12 32<br /><span className="text-[12px] text-brand-cream-soft/55">Abas Kasim & Mustafa Kassim</span></span>
+                  <span>0176 24 83 12 32<br /><span className="text-[12px] text-brand-cream-soft/55">Abas & Mustafa</span></span>
                 </a>
               </li>
               <li>
