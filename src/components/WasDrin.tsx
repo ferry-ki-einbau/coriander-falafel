@@ -8,6 +8,7 @@ const drin = [
   { label: 'Frischer Knoblauch', sub: 'Täglich frisch – kein Pulver, kein Extrakt.' },
   { label: 'Weißer Sesam', sub: 'Handgestreut – für den signature Knuspereffekt.' },
   { label: 'Pure Liebe', sub: 'Kein Marketing-Spruch. Eine Arbeitsweise.' },
+  { label: 'Natürlich grün & saftig', sub: 'Innen immer frisch-grün — das echte Zeichen handgemachter Falafel.' },
   { label: 'High Protein & Ballaststoffe', sub: 'Natürlich sättigend – ohne Zusätze.' },
 ]
 
@@ -16,7 +17,7 @@ const nicht = [
   { label: 'Keine Konservierungsstoffe', sub: 'Tiefgefroren – nicht chemisch konserviert.' },
   { label: 'Keine Aromen', sub: 'Geschmack kommt aus der Zutat, nicht aus dem Labor.' },
   { label: 'Keine Massenware', sub: 'Keine 24/7-Industrie-Produktion.' },
-  { label: 'Keine Kompromisse', sub: 'Lieber weniger produzieren als Qualität opfern.' },
+  { label: 'Keine Kompromisse', sub: 'Qualität ist nicht verhandelbar — bei keiner einzigen Charge.' },
   { label: 'Kein Verstecken', sub: 'Du darfst jederzeit in unsere Produktion kommen.' },
 ]
 
