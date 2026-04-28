@@ -26,6 +26,11 @@ export default function Footer() {
             <p className="text-[13.5px] text-brand-cream-soft/60 leading-relaxed max-w-[38ch]">
               Vegan · Glutenfrei · Halal · Handmade. Seit 2007 — für Gastronomen, Imbisse, Caterer &amp; Großhändler, die keine Kompromisse machen.
             </p>
+            <div className="mt-3 flex items-center gap-2 text-[11px] text-brand-cream-soft/35 tracking-wide">
+              <span>Berlin · 2007</span>
+              <span className="w-1 h-1 rounded-full bg-brand-cream-soft/25" />
+              <span>Heimat · seit 1960</span>
+            </div>
           </div>
 
           {/* Navigation */}

@@ -130,7 +130,7 @@ export default function WasDrin() {
           </p>
           <div className="mt-6 inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.25em] text-brand-cream-soft/55">
             <span className="h-px w-10 bg-brand-cream-soft/30" />
-            Berlin · 2007
+Handgemacht seit 2007
             <span className="h-px w-10 bg-brand-cream-soft/30" />
           </div>
         </motion.div>

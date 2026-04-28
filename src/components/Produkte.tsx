@@ -1,16 +1,17 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Package } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 type Size = {
   name: string
   tagline: string
-  durchmesser: string
-  hoehe: string
-  gewicht: string
+  durchmesser?: string
+  hoehe?: string
+  gewicht?: string
   useCase: string
   image: string
   imgScale: string
   bestseller?: boolean
+  isRohmasse?: boolean
 }
 
 const sizes: Size[] = [
@@ -26,34 +27,42 @@ const sizes: Size[] = [
   },
   {
     name: 'S',
-    tagline: 'Standard',
+    tagline: 'Unser Bestseller',
     durchmesser: '5 cm',
     hoehe: '4 cm',
     gewicht: '50 g',
-    useCase: 'Wraps · Burger · Sandwiches',
+    useCase: 'Unsere Ansicht der perfekten Falafel — saftig und soft. Für Teller, Sandwiches und mehr.',
     image: '/images/produkt-s-sm.webp',
     imgScale: 'scale-[0.65]',
     bestseller: true,
   },
   {
     name: 'M',
-    tagline: 'Mid-Size',
+    tagline: 'Der Klassiker',
     durchmesser: '~ 6 cm',
     hoehe: '~ 5 cm',
     gewicht: '~ 75 g',
-    useCase: 'Teller · Bowls · Gastro-Standard',
+    useCase: 'Unsere Donutform — perfekt für Sandwiches. Schön rund, nicht zu groß.',
     image: '/images/produkt-m-sm.webp',
     imgScale: 'scale-[0.82]',
   },
   {
     name: 'XL',
-    tagline: 'Showpiece',
+    tagline: 'Der Blickfang',
     durchmesser: '~ 8 cm',
     hoehe: '~ 7 cm',
     gewicht: '~ 130 g',
-    useCase: 'Premium-Teller · Fine-Dining',
+    useCase: 'Riesige Falafel — perfekt für Teller, Catering oder Burger.',
     image: '/images/produkt-xl-md.webp',
     imgScale: 'scale-[1.0]',
+  },
+  {
+    name: 'Teig',
+    tagline: 'Rohmasse',
+    useCase: 'Zum Selbstformen und individuellen Gestalten — die frische Rohmasse direkt bestellen.',
+    image: '/images/produkt-s-sm.webp',
+    imgScale: 'scale-[0.65]',
+    isRohmasse: true,
   },
 ]
 
@@ -70,17 +79,17 @@ export default function Produkte() {
         >
           <div className="eyebrow mb-5">Unsere Produkte</div>
           <h2 className="display-lg text-brand-ink mb-6">
-            Vier Größen.<br />
-            <span className="italic text-brand-forest">Pro Beutel: 50 Stück.</span>
+            Verschiedene Größen.<br />
+            <span className="italic text-brand-forest">Grünes Gold.</span>
           </h2>
           <p className="text-[18px] text-brand-charcoal/85 max-w-[54ch] leading-relaxed">
-            Tiefgefroren angeliefert, haltbar über 12 Monate. In der Fritteuse, im Ofen oder in der Heißluft fertig in wenigen Minuten.
+            Außen knusprig, innen saftig. Frisch produziert, tiefgefroren angeliefert. Haltbar 6+ Monate.
             <strong className="font-medium text-brand-ink"> Individuelle Größen und Formen produzieren wir auf Anfrage.</strong>
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
           {sizes.map((size, i) => (
             <motion.article
               key={size.name}
@@ -124,32 +133,32 @@ export default function Produkte() {
                   {size.tagline}
                 </div>
 
-                <dl className="space-y-1.5 mb-3 text-[12px] sm:text-[13px]">
-                  <div className="flex justify-between border-b border-brand-ink/5 pb-1.5">
-                    <dt className="text-brand-charcoal/60">
-                      <span className="sm:hidden">Ø</span>
-                      <span className="hidden sm:inline">Durchmesser</span>
-                    </dt>
-                    <dd className="font-medium text-brand-ink whitespace-nowrap ml-2">{size.durchmesser}</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-brand-ink/5 pb-1.5">
-                    <dt className="text-brand-charcoal/60">Höhe</dt>
-                    <dd className="font-medium text-brand-ink whitespace-nowrap ml-2">{size.hoehe}</dd>
-                  </div>
-                  <div className="flex justify-between pb-1.5">
-                    <dt className="text-brand-charcoal/60">Gew.</dt>
-                    <dd className="font-medium text-brand-ink whitespace-nowrap ml-2">{size.gewicht}</dd>
-                  </div>
-                </dl>
+                {!size.isRohmasse && size.durchmesser && (
+                  <dl className="space-y-1.5 mb-3 text-[12px] sm:text-[13px]">
+                    <div className="flex justify-between border-b border-brand-ink/5 pb-1.5">
+                      <dt className="text-brand-charcoal/60">
+                        <span className="sm:hidden">Ø</span>
+                        <span className="hidden sm:inline">Durchmesser</span>
+                      </dt>
+                      <dd className="font-medium text-brand-ink whitespace-nowrap ml-2">{size.durchmesser}</dd>
+                    </div>
+                    <div className="flex justify-between border-b border-brand-ink/5 pb-1.5">
+                      <dt className="text-brand-charcoal/60">Höhe</dt>
+                      <dd className="font-medium text-brand-ink whitespace-nowrap ml-2">{size.hoehe}</dd>
+                    </div>
+                    <div className="flex justify-between pb-1.5">
+                      <dt className="text-brand-charcoal/60">Gew.</dt>
+                      <dd className="font-medium text-brand-ink whitespace-nowrap ml-2">{size.gewicht}</dd>
+                    </div>
+                  </dl>
+                )}
 
                 <div className="text-[11px] sm:text-[13px] text-brand-charcoal/80 italic mb-3 leading-relaxed">
                   {size.useCase}
                 </div>
 
-                <div className="flex items-center gap-1.5 text-[11px] sm:text-[12px] font-medium text-brand-forest border-t border-brand-ink/5 pt-2.5">
-                  <Package size={13} strokeWidth={1.8} className="flex-shrink-0" />
-                  <span className="sm:hidden whitespace-nowrap">50 Stück</span>
-                  <span className="hidden sm:inline whitespace-nowrap">50 Stück / Beutel</span>
+                <div className="text-[11px] sm:text-[12px] font-medium text-brand-forest border-t border-brand-ink/5 pt-2.5">
+                  {size.isRohmasse ? 'Menge auf Anfrage' : '50 Stück pro Beutel · tiefgefroren'}
                 </div>
               </div>
             </motion.article>
@@ -180,7 +189,7 @@ export default function Produkte() {
         </motion.div>
 
         <p className="mt-6 text-center text-[12px] text-brand-charcoal/50">
-          Maße sind Richtwerte — verbindliche Spezifikationen gerne auf Anfrage.
+          Maße und Gewicht jeglicher Art sind Richtwerte. Verbindliche Spezifikationen auf Anfrage.
         </p>
       </div>
     </section>

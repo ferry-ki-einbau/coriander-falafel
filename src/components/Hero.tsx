@@ -83,7 +83,7 @@ export default function Hero() {
           </h1>
 
           {/* Slogan */}
-          <p className="font-script text-2xl md:text-3xl text-brand-sand mb-4">
+          <p className="font-script text-lg text-brand-sand/70 mb-4">
             Für die Liebe zum Essen.
           </p>
 
@@ -91,7 +91,7 @@ export default function Hero() {
           <p className="max-w-2xl text-[15px] md:text-[17px] text-brand-cream-soft/95 leading-relaxed mb-6 md:mb-8 font-normal">
             <strong className="font-medium text-brand-cream-soft">Coriander Falafel</strong> — dein Falafel-Großhandel aus Berlin.
             Vegan, glutenfrei & halal. In verschiedenen Größen, nach Familienrezept —
-            für Imbisse, Restaurants, Caterer und alle, die das Beste wollen.
+            für Imbisse, Restaurants, Caterer, Großhändler, Großmärkte und alle, die das Beste wollen.
           </p>
 
           {/* CTAs */}

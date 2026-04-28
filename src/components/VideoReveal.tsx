@@ -28,7 +28,7 @@ export default function VideoReveal() {
           </h2>
 
           <p className="text-[16px] md:text-[17px] text-brand-cream-soft/75 leading-relaxed max-w-[44ch] mb-8">
-            Jede Falafel wird nach unserem Familienrezept von Hand geformt. Frische Zutaten, keine Shortcuts — das schmeckt man.
+            Jede Falafel wird nach unserem Familienrezept von Hand geformt. Frische Zutaten, keine Abkürzungen — das schmeckt man.
           </p>
 
           <ul className="space-y-3 mb-10">

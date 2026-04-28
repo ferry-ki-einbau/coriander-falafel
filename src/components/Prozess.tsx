@@ -7,21 +7,21 @@ const steps = [
     icon: MessageSquare,
     titel: 'Anfrage',
     sub: 'Heute',
-    text: 'Formular ausfüllen oder anrufen. Wir melden uns innerhalb eines Werktags mit allen Informationen — unverbindlich und ohne Bullshit.',
+    text: 'Gerne anrufen oder per WhatsApp melden — oder das Formular ausfüllen. Antwort innerhalb weniger Stunden von den Chefs persönlich.',
   },
   {
     nr: '02',
     icon: Package,
     titel: 'Probebeutel',
     sub: 'In 3 Tagen',
-    text: 'Auf Wunsch schicken wir dir einen Probebeutel zum Testen. Fritteuse, Ofen, Heißluft — du entscheidest, ob unsere Falafel zu euch passen.',
+    text: 'Auf Wunsch schicken wir dir Proben zum Testen. Fritteuse, Ofen, Heißluft oder viele weitere Anwendungsmöglichkeiten, zu denen wir dich gerne beraten — du entscheidest. Wir machen die Falafel passend zu euch.',
   },
   {
     nr: '03',
     icon: Truck,
     titel: 'Dauerlieferung',
     sub: 'Flexibel & zuverlässig',
-    text: 'Passt alles? Dann läuft. Feste Preise, flexible Mengen, pünktliche Lieferung. Mit Ansprechpartner direkt am Telefon — keine Warteschleife.',
+    text: 'Bist du überzeugt? Dann starten wir. Dauerlieferung, feste Preise, flexible Mengen, pünktliche Lieferung. Direkter Ansprechpartner — keine Warteschleife, kein Callcenter.',
   },
 ]
 
@@ -98,7 +98,7 @@ export default function Prozess() {
               Kein Risiko.
             </div>
             <h3 className="font-serif text-[22px] md:text-[28px] font-bold text-brand-cream-soft leading-tight">
-              Probebeutel kostenlos. Keine Mindestabnahme für den Test.
+              Lass deine Zunge entscheiden. Proben kostenlos, keine Mindestabnahme.
             </h3>
           </div>
           <a

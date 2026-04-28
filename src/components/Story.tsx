@@ -36,7 +36,7 @@ export default function Story() {
                 Erfahrung
               </div>
               <div className="font-serif text-5xl md:text-6xl font-bold leading-none">
-                18<span className="text-[28px] font-normal align-top ml-0.5">+</span>
+                19<span className="text-[28px] font-normal align-top ml-0.5">+</span>
               </div>
               <div className="text-[12px] uppercase tracking-[0.18em] mt-1 text-brand-cream-soft/80">
                 Jahre
