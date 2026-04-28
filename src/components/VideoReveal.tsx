@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const zutaten = [
   'Kichererbsen — eingeweicht, niemals aus der Dose',
-  'Frische Petersilie & Koriander',
+  'Frische Petersilie, Koriander & Knoblauch',
   'Familienrezept-Gewürze seit 2007',
   'Weißer Sesam',
 ]
