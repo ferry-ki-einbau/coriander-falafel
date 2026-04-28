@@ -65,11 +65,11 @@ export default function Story() {
                 verdient als ein beigelegtes Fertigprodukt aus dem Karton.
               </p>
               <p>
-                Heute beliefern wir Imbisse, Restaurants, Caterer und Hotels in ganz Deutschland.
+                Heute beliefern wir Imbisse, Restaurants, Caterer, Großhändler und Hotels in ganz Deutschland.
                 Aber eins hat sich nie geändert: <strong className="font-medium text-brand-ink">Wir produzieren jeden Tag so, als würden wir für unsere eigene Familie kochen.</strong>
               </p>
               <p>
-                Feinste Kichererbsen, frische Kräuter, weißer Sesam, Gewürze nach Familienrezept.
+                Feinste Kichererbsen, frische Kräuter, frischer Knoblauch, weißer Sesam, Gewürze nach Familienrezept.
                 Keine Chemie. Keine Konservierungsstoffe. Keine Kompromisse.
               </p>
             </div>
