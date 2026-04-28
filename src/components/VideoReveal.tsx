@@ -74,7 +74,7 @@ export default function VideoReveal() {
             <source media="(min-width: 560px)" srcSet="/images/zutaten-flatlay-md.webp" />
             <img
               src="/images/zutaten-flatlay-sm.webp"
-              alt="Zutaten für Coriander Falafel — Kichererbsen, frische Kräuter, Sesam"
+              alt="Zutaten für Coriander Falafel — Kichererbsen, frische Kräuter, Knoblauch, Sesam"
               className="w-full h-full object-cover object-center"
               loading="lazy"
               decoding="async"
