@@ -3,7 +3,7 @@ import { Check, X } from 'lucide-react'
 
 const drin = [
   { label: 'Feinste Kichererbsen', sub: 'Sortenreine Auswahl, eingeweicht – niemals aus der Dose.' },
-  { label: 'Frische Kräuter', sub: 'Petersilie und Koriander – täglich frisch verarbeitet.' },
+  { label: 'Frische Kräuter', sub: 'Petersilie, Koriander & frischer Knoblauch – täglich frisch verarbeitet.' },
   { label: 'Familienrezept-Gewürze', sub: 'Die Mischung, die uns seit 19 Jahren unterscheidet.' },
   { label: 'Frischer Knoblauch', sub: 'Täglich frisch – kein Pulver, kein Extrakt.' },
   { label: 'Weißer Sesam', sub: 'Handgestreut – für den signature Knuspereffekt.' },
@@ -125,13 +125,12 @@ export default function WasDrin() {
           transition={{ duration: 0.9, delay: 0.3 }}
           className="mt-8 md:mt-20 text-center max-w-3xl mx-auto"
         >
-          <p className="font-serif text-[24px] md:text-[32px] leading-[1.35] text-brand-cream-soft italic">
-            Wir produzieren, was wir selbst essen würden —{' '}
-            <span className="text-brand-sand not-italic font-semibold">jeden einzelnen Tag.</span>
+          <p className="font-script text-[clamp(2rem,6vw,3.5rem)] text-brand-sand leading-tight">
+            Für die Liebe zum Essen.
           </p>
           <div className="mt-6 inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.25em] text-brand-cream-soft/55">
             <span className="h-px w-10 bg-brand-cream-soft/30" />
-Handgemacht seit 2007
+            Handgemacht seit 1960
             <span className="h-px w-10 bg-brand-cream-soft/30" />
           </div>
         </motion.div>
