@@ -94,12 +94,12 @@ export default function Prozess() {
           className="mt-8 md:mt-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-brand-forest-deep text-brand-cream-soft p-6 md:p-10 rounded-sm"
         >
           <div className="max-w-2xl">
-            <div className="font-script text-[22px] md:text-[26px] text-brand-sand mb-2">
-              Kein Risiko.
-            </div>
             <h3 className="font-serif text-[22px] md:text-[28px] font-bold text-brand-cream-soft leading-tight">
-              Lass deine Zunge entscheiden. Proben kostenlos, keine Mindestabnahme.
+              Kein Risiko — lass deine Zunge entscheiden.
             </h3>
+            <p className="text-[16px] text-brand-cream-soft/70 mt-2">
+              Proben kostenlos. Keine Mindestabnahme für den Test.
+            </p>
           </div>
           <a
             href="#kontakt"
