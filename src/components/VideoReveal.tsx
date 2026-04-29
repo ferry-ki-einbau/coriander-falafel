@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const zutaten = [
   'Kichererbsen — eingeweicht, niemals aus der Dose',
   'Frische Petersilie, Koriander & Knoblauch',
-  'Familienrezept-Gewürze seit 2007',
+  'Familienrezept-Gewürze seit 1960',
   'Weißer Sesam',
 ]
 
@@ -20,15 +20,15 @@ export default function VideoReveal() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col justify-center px-8 py-10 md:px-14 lg:px-16 xl:px-20 lg:py-20"
         >
-          <div className="eyebrow text-brand-sand/70 mb-5">Produziert in Berlin</div>
+          <div className="eyebrow text-brand-sand/70 mb-5">Rezept seit 1960 · Berlin seit 2007</div>
 
           <h2 className="font-serif text-[clamp(2.2rem,5vw,4rem)] font-bold text-brand-cream-soft leading-[1.08] mb-6">
             Handgemacht.<br />
-            <span className="italic text-brand-rust">Seit 2007.</span>
+            <span className="italic text-brand-rust">Seit 1960.</span>
           </h2>
 
           <p className="text-[16px] md:text-[17px] text-brand-cream-soft/75 leading-relaxed max-w-[44ch] mb-8">
-            Jede Falafel wird nach unserem Familienrezept von Hand geformt. Frische Zutaten, keine Abkürzungen — das schmeckt man.
+            Das Rezept reicht zurück bis 1960 — in die Heimat. 2007 brachten wir es nach Berlin. Jede Falafel wird nach diesem Familienrezept von Hand geformt. Frische Zutaten, keine Abkürzungen — das schmeckt man.
           </p>
 
           <ul className="space-y-3 mb-10">

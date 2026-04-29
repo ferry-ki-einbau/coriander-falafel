@@ -6,7 +6,7 @@ const badges = [
   { icon: Award, label: 'Halal', sub: 'Rein pflanzlich' },
   { icon: Hand, label: 'Handmade', sub: 'Keine Industrie-Massenware' },
   { icon: MapPin, label: 'Made in Berlin', sub: 'Seit 2007' },
-  { icon: Heart, label: 'Made with Love', sub: 'Familienrezept' },
+  { icon: Heart, label: 'Familienrezept', sub: 'Seit 1960 in der Heimat' },
 ]
 
 export default function TrustBadges() {

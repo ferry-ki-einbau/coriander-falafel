@@ -43,7 +43,7 @@ export default function StatementQuote() {
           transition={{ duration: 0.8, delay: 1 }}
           className="mt-7 text-center text-[11px] uppercase tracking-[0.35em] text-brand-cream-soft/35"
         >
-          Berlin · Seit 2007 · Familienrezept
+          Rezept seit 1960 · Berlin seit 2007 · Familienrezept
         </motion.p>
       </div>
     </section>

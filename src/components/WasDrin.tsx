@@ -4,7 +4,7 @@ import { Check, X } from 'lucide-react'
 const drin = [
   { label: 'Feinste Kichererbsen', sub: 'Sortenreine Auswahl, eingeweicht – niemals aus der Dose.' },
   { label: 'Frische Kräuter', sub: 'Petersilie, Koriander & frischer Knoblauch – täglich frisch verarbeitet.' },
-  { label: 'Familienrezept-Gewürze', sub: 'Die Mischung, die uns seit 19 Jahren unterscheidet.' },
+  { label: 'Familienrezept-Gewürze', sub: 'Die Mischung, die unsere Familie seit 1960 hütet.' },
   { label: 'Frischer Knoblauch', sub: 'Täglich frisch – kein Pulver, kein Extrakt.' },
   { label: 'Weißer Sesam', sub: 'Handgestreut – für den signature Knuspereffekt.' },
   { label: 'Pure Liebe', sub: 'Kein Marketing-Spruch. Eine Arbeitsweise.' },

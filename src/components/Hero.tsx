@@ -55,7 +55,7 @@ export default function Hero() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-3 text-[11px] md:text-[12px] uppercase tracking-[0.32em] text-brand-sand/90 mb-6">
             <span className="h-px w-8 bg-brand-sand/50" />
-            Seit 2007 · Berlin
+            Rezept seit 1960 · Berlin seit 2007
             <span className="h-px w-8 bg-brand-sand/50" />
           </div>
 
@@ -90,7 +90,7 @@ export default function Hero() {
           {/* Subheadline */}
           <p className="max-w-2xl text-[15px] md:text-[17px] text-brand-cream-soft/95 leading-relaxed mb-6 md:mb-8 font-normal">
             <strong className="font-medium text-brand-cream-soft">Coriander Falafel</strong> — dein Falafel-Großhandel aus Berlin.
-            Vegan, glutenfrei & halal. In verschiedenen Größen, nach Familienrezept —
+            Vegan, glutenfrei & halal. In verschiedenen Größen, nach unserem Familienrezept seit 1960 —
             für Imbisse, Restaurants, Caterer, Großhändler, Großmärkte und alle, die das Beste wollen.
           </p>
 

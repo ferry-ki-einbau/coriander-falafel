@@ -53,16 +53,18 @@ export default function Story() {
           >
             <div className="eyebrow mb-5">Unsere Geschichte</div>
             <h2 className="display-lg text-brand-ink mb-8">
-              19 Jahre.<br />
-              Ein Familien&shy;rezept.<br />
-              <span className="italic text-brand-forest">Berlin.</span>
+              Seit 1960 in der Heimat.<br />
+              <span className="italic text-brand-forest">Seit 2007 in Berlin.</span>
             </h2>
 
             <div className="space-y-5 text-[17px] leading-[1.75] text-brand-charcoal/90 max-w-[52ch]">
               <p>
-                Angefangen haben wir 2007 in Berlin. Mit einem Rezept, das seit Generationen
-                in unserer Familie weitergegeben wird. Mit der Überzeugung, dass Falafel mehr
-                verdient als ein beigelegtes Fertigprodukt aus dem Karton.
+                Das Rezept reicht zurück bis <strong className="font-medium text-brand-ink">1960</strong> — in die Heimat unserer Familie.
+                Über drei Generationen weitergegeben, verfeinert, geschützt.
+              </p>
+              <p>
+                <strong className="font-medium text-brand-ink">2007</strong> brachten wir es nach Berlin —
+                mit der Überzeugung, dass Falafel mehr verdient als ein beigelegtes Fertigprodukt aus dem Karton.
               </p>
               <p>
                 Heute beliefern wir Imbisse, Restaurants, Caterer, Großhändler und Hotels in ganz Deutschland.
