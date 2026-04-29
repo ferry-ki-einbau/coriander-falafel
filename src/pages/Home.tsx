@@ -22,15 +22,15 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBadges />
-        <Story />
+        <SocialProof />
+        <FuerWen />
+        <Produkte />
         <WasDrin />
         <VideoReveal />
-        <Produkte />
-        <Probemuster />
-        <Prozess />
-        <FuerWen />
         <Anwendungen />
-        <SocialProof />
+        <Prozess />
+        <Story />
+        <Probemuster />
         <FAQ />
         <Kontakt />
       </main>
