@@ -32,7 +32,7 @@ const sizes: Size[] = [
     hoehe: '~ 2,5 cm',
     gewicht: '~ 20 g',
     useCase: 'Die klassische Standardform — für Wraps, Teller, Sandwiches und mehr.',
-    image: '/images/produkt-s-new-sm.webp',
+    image: '/images/produkt-s-sm.webp',
     imgScale: 'scale-[0.9]',
   },
   {
@@ -53,7 +53,7 @@ const sizes: Size[] = [
     hoehe: '~ 7 cm',
     gewicht: '~ 130 g',
     useCase: 'Riesige Falafel — perfekt für Teller, Catering oder Burger.',
-    image: '/images/produkt-xl-new-sm.webp',
+    image: '/images/produkt-xl-sm.webp',
     imgScale: 'scale-[0.9]',
   },
   {
