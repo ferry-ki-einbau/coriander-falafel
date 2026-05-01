@@ -54,7 +54,7 @@ const sizes: Size[] = [
     gewicht: '~ 130 g',
     useCase: 'Riesige Falafel — perfekt für Teller, Catering oder Burger.',
     image: '/images/produkt-xl-sm.webp',
-    imgScale: 'scale-[0.9]',
+    imgScale: 'scale-[0.65]',
   },
   {
     name: 'Teig',
