@@ -38,14 +38,14 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease: 'easeOut' }}
-            className="relative w-32 md:w-40 h-32 md:h-40 mb-5 md:mb-7 rounded-full overflow-hidden ring-1 ring-brand-cream-soft/20 shadow-[0_24px_64px_rgba(0,0,0,0.55),0_4px_20px_rgba(0,0,0,0.35)] flex-shrink-0"
+            className="relative w-36 md:w-44 h-36 md:h-44 mb-5 md:mb-7 rounded-full overflow-hidden bg-[#F5E8A0] shadow-[0_24px_64px_rgba(0,0,0,0.55),0_4px_20px_rgba(0,0,0,0.35)] flex-shrink-0"
           >
             <img
-              src="/images/logo-crop-md.webp"
+              src="/images/logo-v2-md.webp"
               alt="Coriander Falafel Logo"
               width={224}
               height={224}
-              className="w-full h-full object-cover object-center scale-[1.06]"
+              className="w-full h-full object-contain object-center"
               loading="eager"
               decoding="sync"
               fetchPriority="high"

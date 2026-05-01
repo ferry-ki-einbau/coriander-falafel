@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 md:gap-12 pb-14 border-b border-brand-cream-soft/10">
           {/* Brand */}
           <div>
-            <div className="w-16 h-16 rounded-full overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.35)] mb-5">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-[#F5E8A0] shadow-[0_4px_16px_rgba(0,0,0,0.35)] mb-5">
               <img
-                src="/images/logo-crop-sm.webp"
+                src="/images/logo-v2-sm.webp"
                 alt="Coriander Falafel"
                 width={64}
                 height={64}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 loading="lazy"
               />
             </div>
