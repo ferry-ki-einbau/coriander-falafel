@@ -42,9 +42,9 @@ export default function Nav() {
           className="flex items-center gap-3 group"
           aria-label="Coriander Falafel Startseite"
         >
-          <div className="h-11 w-11 rounded-full overflow-hidden flex-shrink-0 bg-[#F5E8A0] shadow-[0_4px_16px_rgba(0,0,0,0.25)]">
+          <div className="h-11 w-11 flex-shrink-0">
             <img
-              src="/images/logo-v2-sm.webp"
+              src="/images/logo-transparent-sm.png"
               alt="Coriander Falafel"
               width={44}
               height={44}
