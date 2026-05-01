@@ -60,8 +60,8 @@ const sizes: Size[] = [
     name: 'Teig',
     tagline: 'Unser grünes Gold',
     useCase: 'Unser Teig nach unserer Rezeptur. Zum Selbstformen und individuellen Gestalten — die frische Rohmasse direkt bestellen.',
-    image: '/images/produkt-s-sm.webp',
-    imgScale: 'scale-[0.65]',
+    image: '/images/produkt-teig-sm.webp',
+    imgScale: 'scale-[0.9]',
     isRohmasse: true,
   },
 ]
