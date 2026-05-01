@@ -27,7 +27,7 @@ const sizes: Size[] = [
   },
   {
     name: 'S',
-    tagline: 'Standard',
+    tagline: 'Gehobener Standard',
     durchmesser: '~ 3 cm',
     hoehe: '~ 2,5 cm',
     gewicht: '~ 20 g',
