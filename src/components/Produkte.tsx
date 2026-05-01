@@ -22,8 +22,8 @@ const sizes: Size[] = [
     hoehe: '~ 5 cm',
     gewicht: '~ 75 g',
     useCase: 'Unsere Donutform — perfekt für Sandwiches. Schön rund, nicht zu groß.',
-    image: '/images/produkt-m-sm.webp',
-    imgScale: 'scale-[0.82]',
+    image: '/images/produkt-l-sm.webp',
+    imgScale: 'scale-[0.9]',
   },
   {
     name: 'S',
@@ -32,8 +32,8 @@ const sizes: Size[] = [
     hoehe: '~ 2,5 cm',
     gewicht: '~ 20 g',
     useCase: 'Die klassische Standardform — für Wraps, Teller, Sandwiches und mehr.',
-    image: '/images/produkt-xs-sm.webp',
-    imgScale: 'scale-[0.48]',
+    image: '/images/produkt-s-new-sm.webp',
+    imgScale: 'scale-[0.9]',
   },
   {
     name: 'N',
@@ -42,8 +42,8 @@ const sizes: Size[] = [
     hoehe: '4 cm',
     gewicht: '50 g',
     useCase: 'In unseren Augen die perfekte Falafel — saftig, soft und grün. Für jede Anwendung.',
-    image: '/images/produkt-s-sm.webp',
-    imgScale: 'scale-[0.65]',
+    image: '/images/produkt-n-sm.webp',
+    imgScale: 'scale-[0.9]',
     bestseller: true,
   },
   {
@@ -53,8 +53,8 @@ const sizes: Size[] = [
     hoehe: '~ 7 cm',
     gewicht: '~ 130 g',
     useCase: 'Riesige Falafel — perfekt für Teller, Catering oder Burger.',
-    image: '/images/produkt-xl-md.webp',
-    imgScale: 'scale-[1.0]',
+    image: '/images/produkt-xl-new-sm.webp',
+    imgScale: 'scale-[0.9]',
   },
   {
     name: 'Teig',
