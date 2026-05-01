@@ -83,7 +83,7 @@ export default function Produkte() {
             <span className="italic text-brand-forest">Grünes Gold.</span>
           </h2>
           <p className="text-[18px] text-brand-charcoal/85 max-w-[54ch] leading-relaxed">
-            Außen knusprig, innen saftig. Frisch produziert, tiefgefroren angeliefert. Haltbar 6+ Monate.
+            Außen knusprig, innen saftig und grün. Frisch produziert, tiefgefroren angeliefert. Haltbar 6+ Monate.
             <strong className="font-medium text-brand-ink"> Individuelle Größen und Formen produzieren wir auf Anfrage.</strong>
           </p>
         </motion.div>
