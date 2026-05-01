@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 md:gap-12 pb-14 border-b border-brand-cream-soft/10">
           {/* Brand */}
           <div>
-            <div className="w-28 h-28 mb-5">
+            <div className="w-32 mb-5">
               <img
-                src="/images/logo-transparent-sm.png"
+                src="/images/logo-transparent-md.png"
                 alt="Coriander Falafel"
-                width={64}
-                height={64}
-                className="w-full h-full object-contain drop-shadow-md"
+                width={300}
+                height={212}
+                className="w-full h-auto drop-shadow-md"
                 loading="lazy"
               />
             </div>
