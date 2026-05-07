@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import { Check, X } from 'lucide-react'
 
 const drin = [
@@ -22,6 +23,11 @@ const nicht = [
 ]
 
 export default function WasDrin() {
+  const drinRef = useRef(null)
+  const nichtRef = useRef(null)
+  const drinVisible = useInView(drinRef, { once: true, margin: '-80px' })
+  const nichtVisible = useInView(nichtRef, { once: true, margin: '-80px' })
+
   return (
     <section className="section-pad relative bg-brand-ink text-brand-cream-soft overflow-hidden">
       <div className="container-prose">
@@ -47,6 +53,7 @@ export default function WasDrin() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="relative bg-brand-forest p-6 md:p-12"
+            ref={drinRef}
           >
             <div className="flex items-center gap-3 mb-8 pb-6 border-b border-brand-cream-soft/15">
               <div className="w-11 h-11 rounded-full bg-brand-cream-soft/10 flex items-center justify-center">
@@ -58,8 +65,14 @@ export default function WasDrin() {
               </div>
             </div>
             <ul className="space-y-3 md:space-y-5">
-              {drin.map(item => (
-                <li key={item.label} className="flex gap-4">
+              {drin.map((item, i) => (
+                <motion.li
+                  key={item.label}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={drinVisible ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.4, delay: i * 0.07 }}
+                  className="flex gap-4"
+                >
                   <Check
                     size={20}
                     strokeWidth={2.2}
@@ -73,7 +86,7 @@ export default function WasDrin() {
                       {item.sub}
                     </div>
                   </div>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>
@@ -85,6 +98,7 @@ export default function WasDrin() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative bg-brand-rust p-6 md:p-12"
+            ref={nichtRef}
           >
             <div className="flex items-center gap-3 mb-8 pb-6 border-b border-brand-cream-soft/20">
               <div className="w-11 h-11 rounded-full bg-brand-cream-soft/10 flex items-center justify-center">
@@ -96,8 +110,14 @@ export default function WasDrin() {
               </div>
             </div>
             <ul className="space-y-3 md:space-y-5">
-              {nicht.map(item => (
-                <li key={item.label} className="flex gap-4">
+              {nicht.map((item, i) => (
+                <motion.li
+                  key={item.label}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={nichtVisible ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.4, delay: i * 0.07 }}
+                  className="flex gap-4"
+                >
                   <X
                     size={20}
                     strokeWidth={2.2}
@@ -111,7 +131,7 @@ export default function WasDrin() {
                       {item.sub}
                     </div>
                   </div>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </motion.div>

@@ -25,6 +25,30 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(245,180,80,0.07)_0%,_transparent_60%)]" />
       </div>
 
+      {/* Floating sesame seed particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        {[
+          { x: '15%', delay: '0s', dur: '6s', size: 5 },
+          { x: '30%', delay: '1.5s', dur: '8s', size: 3 },
+          { x: '55%', delay: '0.8s', dur: '7s', size: 4 },
+          { x: '70%', delay: '2.2s', dur: '9s', size: 3 },
+          { x: '82%', delay: '0.3s', dur: '6.5s', size: 5 },
+          { x: '45%', delay: '3s', dur: '7.5s', size: 3 },
+          { x: '88%', delay: '1.8s', dur: '8.5s', size: 4 },
+        ].map((p, i) => (
+          <span
+            key={i}
+            className="absolute bottom-0 rounded-full bg-brand-sand/30"
+            style={{
+              left: p.x,
+              width: p.size,
+              height: p.size * 1.6,
+              animation: `floatUp ${p.dur} ${p.delay} infinite linear`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Content */}
       <div className="relative container-prose pt-20 pb-10 md:pt-20 md:pb-12 min-h-[100dvh] flex flex-col justify-center">
         <motion.div
@@ -33,11 +57,11 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="flex flex-col items-center text-center max-w-4xl mx-auto"
         >
-          {/* Logo — circle crop removes rectangular background */}
+          {/* Logo — floating bob animation */}
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
+            animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+            transition={{ opacity: { duration: 0.9 }, scale: { duration: 0.9 }, y: { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 } }}
             className="relative w-48 md:w-64 mb-5 md:mb-7 flex-shrink-0 drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
           >
             <img

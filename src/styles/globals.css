@@ -223,6 +223,13 @@
       radial-gradient(circle at 75% 75%, rgba(31, 74, 44, 0.03) 0, transparent 40%);
   }
 
+  @keyframes floatUp {
+    0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10%  { opacity: 0.6; }
+    90%  { opacity: 0.3; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+  }
+
   @keyframes marquee {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
