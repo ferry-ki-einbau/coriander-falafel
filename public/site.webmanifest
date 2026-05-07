@@ -4,9 +4,10 @@
   "description": "Premium Falafel-Großhandel aus Berlin. Vegan, glutenfrei, halal. Seit 2007.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF1D3",
+  "background_color": "#1F4A2C",
   "theme_color": "#1F4A2C",
   "icons": [
-    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+    { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
