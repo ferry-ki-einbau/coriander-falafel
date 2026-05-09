@@ -67,7 +67,7 @@ export default function Story() {
                 mit der Überzeugung, dass Falafel mehr verdient als ein beigelegtes Fertigprodukt aus dem Karton.
               </p>
               <p>
-                Heute beliefern wir Imbisse, Restaurants, Caterer, Großhändler und Hotels in ganz Deutschland.
+                Als Berliner Falafel-Hersteller beliefern wir heute Imbisse, Restaurants, Caterer, Großhändler und Hotels in ganz Deutschland.
                 Aber eins hat sich nie geändert: <strong className="font-medium text-brand-ink">Wir produzieren jeden Tag so, als würden wir für unsere eigene Familie kochen.</strong>
               </p>
               <p>
