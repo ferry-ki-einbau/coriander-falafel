@@ -113,7 +113,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="max-w-2xl text-[15px] md:text-[17px] text-brand-cream-soft/95 leading-relaxed mb-6 md:mb-8 font-normal">
-            <strong className="font-medium text-brand-cream-soft">Coriander Falafel</strong> — dein Falafel-Großhandel aus Berlin.
+            Deine <strong className="font-medium text-brand-cream-soft">Falafel-Produktion aus Berlin</strong> — Großhandel & Hersteller.
             Vegan, glutenfrei & halal. In verschiedenen Größen, nach unserem Familienrezept seit 1960 —
             für Imbisse, Restaurants, Caterer, Großhändler, Großmärkte und alle, die das Beste wollen.
           </p>
