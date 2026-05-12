@@ -87,7 +87,7 @@ export default function Hero() {
           <h1 className="display-xl text-brand-cream-soft mb-6 md:mb-7">
             Mit über{' '}
             <span className="relative inline-block">
-              <span className="italic text-brand-rust">19 Jahren</span>
+              <span className="italic text-brand-rust">20 Jahren</span>
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"

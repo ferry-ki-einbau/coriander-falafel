@@ -20,7 +20,7 @@ export default function FalafelHersteller() {
           text: 'Als Direkthersteller arbeiten wir ohne Zwischenhändler. Das bedeutet für euch: faire Preise, kurze Kommunikationswege und Flexibilität. Individuelle Größen, eigene Rezepturen oder Private-Label-Produktion? Wir produzieren was ihr braucht — ab einer gewissen Abnahmemenge auch nach euren Vorstellungen.',
         },
         {
-          title: '19 Jahre Erfahrung in der Falafel-Herstellung',
+          title: '20 Jahre Erfahrung in der Falafel-Herstellung',
           text: 'Seit 2007 stellen wir Falafel für die Gastronomie her. In diesen Jahren haben wir über 100 Gastro-Partner aufgebaut — vom Berliner Imbiss bis zum bundesweiten Caterer. Unser Rezept hat sich nicht verändert. Unsere Erfahrung schon.',
         },
       ]}

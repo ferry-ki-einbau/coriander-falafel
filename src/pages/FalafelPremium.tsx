@@ -31,7 +31,7 @@ export default function FalafelPremium() {
         'Kein Pulver, keine Aromen',
         'Handgeformt nach Familienrezept',
         'Vegan, glutenfrei, halal',
-        '19+ Jahre Erfahrung',
+        '20+ Jahre Erfahrung',
         'Proben kostenlos',
       ]}
       ctaText="Premium-Falafel bestellen"

@@ -5,7 +5,7 @@ import { useCountUp } from '../hooks/useCountUp'
 type Stat = { target: number; suffix?: string; label: string; sub: string }
 
 const stats: Stat[] = [
-  { target: 19, suffix: '+', label: 'Jahre Erfahrung', sub: 'Seit 2007 in Berlin · seit 1960 in der Heimat' },
+  { target: 20, suffix: '+', label: 'Jahre Erfahrung', sub: 'Seit 2007 in Berlin · seit 1960 in der Heimat' },
   { target: 100, suffix: '+', label: 'Gastro-Partner', sub: 'Mehrere Hunderte in ganz Deutschland' },
   { target: 4, suffix: '+', label: 'Größen', sub: '4 verschiedene Größen & Falafelrohteigmasse' },
   { target: 6, suffix: '+', label: 'Monate haltbar', sub: 'Tiefgefroren geliefert' },
