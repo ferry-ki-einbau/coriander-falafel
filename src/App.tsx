@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react'
 import Home from './pages/Home'
 import Impressum from './pages/Impressum'
 import Datenschutz from './pages/Datenschutz'
+import FalafelHersteller from './pages/FalafelHersteller'
+import FalafelTK from './pages/FalafelTK'
+import FalafelPremium from './pages/FalafelPremium'
+import FalafelMadeInGermany from './pages/FalafelMadeInGermany'
+import FalafelGrosshandel from './pages/FalafelGrosshandel'
 import CookieBanner from './components/CookieBanner'
 
 function getInitialPath(): string {
@@ -40,6 +45,11 @@ export default function App() {
   let page = <Home />
   if (path === '/impressum') page = <Impressum />
   else if (path === '/datenschutz') page = <Datenschutz />
+  else if (path === '/falafel-hersteller') page = <FalafelHersteller />
+  else if (path === '/falafel-tk') page = <FalafelTK />
+  else if (path === '/falafel-premium') page = <FalafelPremium />
+  else if (path === '/falafel-made-in-germany') page = <FalafelMadeInGermany />
+  else if (path === '/falafel-grosshandel') page = <FalafelGrosshandel />
 
   return (
     <>

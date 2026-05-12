@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/impressum", "destination": "/impressum/index.html" },
-    { "source": "/datenschutz", "destination": "/datenschutz/index.html" }
+    { "source": "/datenschutz", "destination": "/datenschutz/index.html" },
+    { "source": "/falafel-hersteller", "destination": "/falafel-hersteller/index.html" },
+    { "source": "/falafel-tk", "destination": "/falafel-tk/index.html" },
+    { "source": "/falafel-premium", "destination": "/falafel-premium/index.html" },
+    { "source": "/falafel-made-in-germany", "destination": "/falafel-made-in-germany/index.html" },
+    { "source": "/falafel-grosshandel", "destination": "/falafel-grosshandel/index.html" }
   ]
 }
