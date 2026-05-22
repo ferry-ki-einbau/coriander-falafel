@@ -12,7 +12,7 @@ export default function Impressum() {
 
           <div className="prose-custom space-y-8 text-[15px] leading-relaxed text-brand-charcoal/90">
             <section>
-              <h2 className="font-serif text-[22px] font-bold text-brand-ink mb-3">Angaben gemäß § 5 TMG</h2>
+              <h2 className="font-serif text-[22px] font-bold text-brand-ink mb-3">Angaben gemäß § 5 DDG</h2>
               <p>
                 Coriander Falafel Großhandel<br />
                 Turiner Str. 24<br />
@@ -77,7 +77,7 @@ export default function Impressum() {
             <section>
               <h2 className="font-serif text-[22px] font-bold text-brand-ink mb-3">Haftung für Inhalte</h2>
               <p>
-                Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
               </p>
             </section>
 
